@@ -12,7 +12,28 @@
 		6458FC37C5367B52AE2110F419AB6ADC /* Pods-DJBExtensionKit_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0DBB4ACCA781A9E30B582F63205CC8 /* Pods-DJBExtensionKit_Tests-dummy.m */; };
 		7974CCE4CBF716827ED3EA36C432826D /* Pods-DJBExtensionKit_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E0831DC095D29E40463B9E8716F53AE7 /* Pods-DJBExtensionKit_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		916448CF42B02FD28821B4A9D4BB0475 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		CE754A0971852258187A960DBEDDA83F /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6FCBEC4F5B232F358EA971B51A8540 /* ReplaceMe.swift */; };
+		D9FB176C23055D040030FFBE /* NSTextAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FB175623055D020030FFBE /* NSTextAttachment.swift */; };
+		D9FB176D23055D040030FFBE /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FB175723055D020030FFBE /* String.swift */; };
+		D9FB176E23055D040030FFBE /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FB175823055D020030FFBE /* Collection.swift */; };
+		D9FB176F23055D040030FFBE /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FB175923055D030030FFBE /* UIStackView.swift */; };
+		D9FB177023055D040030FFBE /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FB175A23055D030030FFBE /* Date.swift */; };
+		D9FB177123055D040030FFBE /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FB175B23055D030030FFBE /* UITextField.swift */; };
+		D9FB177223055D040030FFBE /* UISearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FB175C23055D030030FFBE /* UISearchBar.swift */; };
+		D9FB177323055D040030FFBE /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FB175D23055D030030FFBE /* UIButton.swift */; };
+		D9FB177423055D040030FFBE /* RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FB175E23055D030030FFBE /* RxSwift.swift */; };
+		D9FB177523055D040030FFBE /* Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FB175F23055D030030FFBE /* Kingfisher.swift */; };
+		D9FB177623055D040030FFBE /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FB176023055D030030FFBE /* UIViewController.swift */; };
+		D9FB177723055D040030FFBE /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FB176123055D030030FFBE /* Array.swift */; };
+		D9FB177823055D040030FFBE /* Bool.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FB176223055D030030FFBE /* Bool.swift */; };
+		D9FB177923055D040030FFBE /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FB176323055D030030FFBE /* UIFont.swift */; };
+		D9FB177A23055D040030FFBE /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FB176423055D030030FFBE /* UIColor.swift */; };
+		D9FB177B23055D040030FFBE /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FB176523055D030030FFBE /* UIImage.swift */; };
+		D9FB177C23055D040030FFBE /* UIImageView+FaceAware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FB176623055D030030FFBE /* UIImageView+FaceAware.swift */; };
+		D9FB177D23055D040030FFBE /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FB176723055D030030FFBE /* UIView.swift */; };
+		D9FB177E23055D040030FFBE /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FB176823055D040030FFBE /* UICollectionView.swift */; };
+		D9FB177F23055D040030FFBE /* RangeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FB176923055D040030FFBE /* RangeSlider.swift */; };
+		D9FB178023055D040030FFBE /* UIKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FB176A23055D040030FFBE /* UIKitExtensions.swift */; };
+		D9FB178123055D040030FFBE /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FB176B23055D040030FFBE /* UITableView.swift */; };
 		FCDE17257E4BB438A48BBAAD7A57CE3D /* DJBExtensionKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F824D3D8CD633B9934C65B5AB411EFA /* DJBExtensionKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -27,25 +48,46 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0006402726C1720F5EFA355A7A172862 /* DJBExtensionKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = DJBExtensionKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		0006402726C1720F5EFA355A7A172862 /* DJBExtensionKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = DJBExtensionKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		0389928E194163D690609DAE3320642B /* Pods-DJBExtensionKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DJBExtensionKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		047757B87A231601D34C5DE607FFC2C4 /* Pods-DJBExtensionKit_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DJBExtensionKit_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		0890B73B88AAD9EF6A2DA9283C2F292F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		0890B73B88AAD9EF6A2DA9283C2F292F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		345FC7175A19255A5F8B74E4A5F215D0 /* Pods-DJBExtensionKit_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DJBExtensionKit_Tests.modulemap"; sourceTree = "<group>"; };
 		3616201CA74FEC574CCB1748F9FEDAC6 /* Pods-DJBExtensionKit_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DJBExtensionKit_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		52FE0FDCC58148A1A56ACBFBF152D9CE /* DJBExtensionKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "DJBExtensionKit-Info.plist"; sourceTree = "<group>"; };
-		59394B20AF2FE6E6524AFA22812725BC /* DJBExtensionKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DJBExtensionKit.framework; path = DJBExtensionKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5EE544B41D3172777C20523691BEBE45 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		59394B20AF2FE6E6524AFA22812725BC /* DJBExtensionKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DJBExtensionKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EE544B41D3172777C20523691BEBE45 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		661CB3C909B39071E6D046C58194B484 /* Pods-DJBExtensionKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DJBExtensionKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		815C3A594FA3CE4FEA31F93419A09BD2 /* Pods_DJBExtensionKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_DJBExtensionKit_Tests.framework; path = "Pods-DJBExtensionKit_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		815C3A594FA3CE4FEA31F93419A09BD2 /* Pods_DJBExtensionKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DJBExtensionKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8415B33E368C1BA0B349DE020BF44FE4 /* DJBExtensionKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = DJBExtensionKit.modulemap; sourceTree = "<group>"; };
 		8AE6451B038DA4F3E64EE5CE8B89804C /* DJBExtensionKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DJBExtensionKit-prefix.pch"; sourceTree = "<group>"; };
 		9AB454E5BB3C77CEA0EC60187F60A11B /* DJBExtensionKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DJBExtensionKit-dummy.m"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9F824D3D8CD633B9934C65B5AB411EFA /* DJBExtensionKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DJBExtensionKit-umbrella.h"; sourceTree = "<group>"; };
 		AB349BBABE1303708918C33B19DAC246 /* DJBExtensionKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DJBExtensionKit.xcconfig; sourceTree = "<group>"; };
-		CF6FCBEC4F5B232F358EA971B51A8540 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = DJBExtensionKit/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
+		D9FB175623055D020030FFBE /* NSTextAttachment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSTextAttachment.swift; path = DJBExtensionKit/Classes/NSTextAttachment.swift; sourceTree = "<group>"; };
+		D9FB175723055D020030FFBE /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = String.swift; path = DJBExtensionKit/Classes/String.swift; sourceTree = "<group>"; };
+		D9FB175823055D020030FFBE /* Collection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Collection.swift; path = DJBExtensionKit/Classes/Collection.swift; sourceTree = "<group>"; };
+		D9FB175923055D030030FFBE /* UIStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIStackView.swift; path = DJBExtensionKit/Classes/UIStackView.swift; sourceTree = "<group>"; };
+		D9FB175A23055D030030FFBE /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Date.swift; path = DJBExtensionKit/Classes/Date.swift; sourceTree = "<group>"; };
+		D9FB175B23055D030030FFBE /* UITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UITextField.swift; path = DJBExtensionKit/Classes/UITextField.swift; sourceTree = "<group>"; };
+		D9FB175C23055D030030FFBE /* UISearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UISearchBar.swift; path = DJBExtensionKit/Classes/UISearchBar.swift; sourceTree = "<group>"; };
+		D9FB175D23055D030030FFBE /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIButton.swift; path = DJBExtensionKit/Classes/UIButton.swift; sourceTree = "<group>"; };
+		D9FB175E23055D030030FFBE /* RxSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RxSwift.swift; path = DJBExtensionKit/Classes/RxSwift.swift; sourceTree = "<group>"; };
+		D9FB175F23055D030030FFBE /* Kingfisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Kingfisher.swift; path = DJBExtensionKit/Classes/Kingfisher.swift; sourceTree = "<group>"; };
+		D9FB176023055D030030FFBE /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewController.swift; path = DJBExtensionKit/Classes/UIViewController.swift; sourceTree = "<group>"; };
+		D9FB176123055D030030FFBE /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Array.swift; path = DJBExtensionKit/Classes/Array.swift; sourceTree = "<group>"; };
+		D9FB176223055D030030FFBE /* Bool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Bool.swift; path = DJBExtensionKit/Classes/Bool.swift; sourceTree = "<group>"; };
+		D9FB176323055D030030FFBE /* UIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIFont.swift; path = DJBExtensionKit/Classes/UIFont.swift; sourceTree = "<group>"; };
+		D9FB176423055D030030FFBE /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColor.swift; path = DJBExtensionKit/Classes/UIColor.swift; sourceTree = "<group>"; };
+		D9FB176523055D030030FFBE /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIImage.swift; path = DJBExtensionKit/Classes/UIImage.swift; sourceTree = "<group>"; };
+		D9FB176623055D030030FFBE /* UIImageView+FaceAware.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImageView+FaceAware.swift"; path = "DJBExtensionKit/Classes/UIImageView+FaceAware.swift"; sourceTree = "<group>"; };
+		D9FB176723055D030030FFBE /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIView.swift; path = DJBExtensionKit/Classes/UIView.swift; sourceTree = "<group>"; };
+		D9FB176823055D040030FFBE /* UICollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UICollectionView.swift; path = DJBExtensionKit/Classes/UICollectionView.swift; sourceTree = "<group>"; };
+		D9FB176923055D040030FFBE /* RangeSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RangeSlider.swift; path = DJBExtensionKit/Classes/RangeSlider.swift; sourceTree = "<group>"; };
+		D9FB176A23055D040030FFBE /* UIKitExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIKitExtensions.swift; path = DJBExtensionKit/Classes/UIKitExtensions.swift; sourceTree = "<group>"; };
+		D9FB176B23055D040030FFBE /* UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UITableView.swift; path = DJBExtensionKit/Classes/UITableView.swift; sourceTree = "<group>"; };
 		DB0DBB4ACCA781A9E30B582F63205CC8 /* Pods-DJBExtensionKit_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DJBExtensionKit_Tests-dummy.m"; sourceTree = "<group>"; };
 		E0831DC095D29E40463B9E8716F53AE7 /* Pods-DJBExtensionKit_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DJBExtensionKit_Tests-umbrella.h"; sourceTree = "<group>"; };
 		E696F46A3AA8042BE76739F328269F91 /* Pods-DJBExtensionKit_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DJBExtensionKit_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -75,7 +117,28 @@
 		05EB44E58551B4752E4406B1C0DB3352 /* DJBExtensionKit */ = {
 			isa = PBXGroup;
 			children = (
-				CF6FCBEC4F5B232F358EA971B51A8540 /* ReplaceMe.swift */,
+				D9FB176123055D030030FFBE /* Array.swift */,
+				D9FB176223055D030030FFBE /* Bool.swift */,
+				D9FB175823055D020030FFBE /* Collection.swift */,
+				D9FB175A23055D030030FFBE /* Date.swift */,
+				D9FB175F23055D030030FFBE /* Kingfisher.swift */,
+				D9FB175623055D020030FFBE /* NSTextAttachment.swift */,
+				D9FB176923055D040030FFBE /* RangeSlider.swift */,
+				D9FB175E23055D030030FFBE /* RxSwift.swift */,
+				D9FB175723055D020030FFBE /* String.swift */,
+				D9FB175D23055D030030FFBE /* UIButton.swift */,
+				D9FB176823055D040030FFBE /* UICollectionView.swift */,
+				D9FB176423055D030030FFBE /* UIColor.swift */,
+				D9FB176323055D030030FFBE /* UIFont.swift */,
+				D9FB176523055D030030FFBE /* UIImage.swift */,
+				D9FB176623055D030030FFBE /* UIImageView+FaceAware.swift */,
+				D9FB176A23055D040030FFBE /* UIKitExtensions.swift */,
+				D9FB175C23055D030030FFBE /* UISearchBar.swift */,
+				D9FB175923055D030030FFBE /* UIStackView.swift */,
+				D9FB176B23055D040030FFBE /* UITableView.swift */,
+				D9FB175B23055D030030FFBE /* UITextField.swift */,
+				D9FB176723055D030030FFBE /* UIView.swift */,
+				D9FB176023055D030030FFBE /* UIViewController.swift */,
 				FB94EF0F3EA08ABE75B417E4E243F297 /* Pod */,
 				B9408433D82DAD10830DBBD2D082BE21 /* Support Files */,
 			);
@@ -284,8 +347,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9FB177D23055D040030FFBE /* UIView.swift in Sources */,
 				3437D66D9BADF7D8A1C1E0692E91B05E /* DJBExtensionKit-dummy.m in Sources */,
-				CE754A0971852258187A960DBEDDA83F /* ReplaceMe.swift in Sources */,
+				D9FB176F23055D040030FFBE /* UIStackView.swift in Sources */,
+				D9FB177023055D040030FFBE /* Date.swift in Sources */,
+				D9FB177123055D040030FFBE /* UITextField.swift in Sources */,
+				D9FB178123055D040030FFBE /* UITableView.swift in Sources */,
+				D9FB177423055D040030FFBE /* RxSwift.swift in Sources */,
+				D9FB176E23055D040030FFBE /* Collection.swift in Sources */,
+				D9FB177A23055D040030FFBE /* UIColor.swift in Sources */,
+				D9FB177323055D040030FFBE /* UIButton.swift in Sources */,
+				D9FB177E23055D040030FFBE /* UICollectionView.swift in Sources */,
+				D9FB177623055D040030FFBE /* UIViewController.swift in Sources */,
+				D9FB178023055D040030FFBE /* UIKitExtensions.swift in Sources */,
+				D9FB177823055D040030FFBE /* Bool.swift in Sources */,
+				D9FB177223055D040030FFBE /* UISearchBar.swift in Sources */,
+				D9FB177723055D040030FFBE /* Array.swift in Sources */,
+				D9FB177C23055D040030FFBE /* UIImageView+FaceAware.swift in Sources */,
+				D9FB176C23055D040030FFBE /* NSTextAttachment.swift in Sources */,
+				D9FB177F23055D040030FFBE /* RangeSlider.swift in Sources */,
+				D9FB177923055D040030FFBE /* UIFont.swift in Sources */,
+				D9FB177523055D040030FFBE /* Kingfisher.swift in Sources */,
+				D9FB177B23055D040030FFBE /* UIImage.swift in Sources */,
+				D9FB176D23055D040030FFBE /* String.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,7 +409,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/DJBExtensionKit/DJBExtensionKit-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/DJBExtensionKit/DJBExtensionKit-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/DJBExtensionKit/DJBExtensionKit.modulemap";
 				PRODUCT_MODULE_NAME = DJBExtensionKit;
@@ -333,7 +417,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -391,7 +475,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/DJBExtensionKit/DJBExtensionKit-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/DJBExtensionKit/DJBExtensionKit-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/DJBExtensionKit/DJBExtensionKit.modulemap";
 				PRODUCT_MODULE_NAME = DJBExtensionKit;
@@ -399,7 +483,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -492,8 +576,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};

@@ -1,0 +1,17 @@
+//
+//  UIButton.swift
+//  DJBExtentionKit
+//
+//  Created by Douwe Bos on 14/08/2019.
+//  Copyright © 2019 DJBSoftware. All rights reserved.
+//
+
+import UIKit
+
+extension UIButton {
+    func imageToRight() {
+        transform = CGAffineTransform(scaleX: -1.0, y: 1.0)
+        titleLabel?.transform = CGAffineTransform(scaleX: -1.0, y: 1.0)
+        imageView?.transform = CGAffineTransform(scaleX: -1.0, y: 1.0)
+    }
+}
