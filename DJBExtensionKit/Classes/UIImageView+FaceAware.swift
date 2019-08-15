@@ -47,7 +47,7 @@ public extension UIImageView {
         }
     }
 
-    public func set(image: UIImage?, focusOnFaces: Bool) {
+    func set(image: UIImage?, focusOnFaces: Bool) {
         guard focusOnFaces == true else {
             self.removeImageLayer(image: image)
             return

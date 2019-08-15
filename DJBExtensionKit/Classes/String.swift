@@ -16,7 +16,7 @@ public extension String {
     ///
     /// - Parameter keyPath: key under which the localized string is stored
     /// - Returns: Localized string for key, if no localized string exists it returns the key
-    public static func localizedString(for keyPath: String, from staticString: NSDictionary) -> String {
+    static func localizedString(for keyPath: String, from staticString: NSDictionary) -> String {
         if let s = staticString.value(forKeyPath: "\(keyPath).value") as? String {
             return s.replacingOccurrences(of: "\\n", with: "\n")
         } else {
@@ -28,7 +28,7 @@ public extension String {
     /// Returns localized string using `self` as key
     ///
     /// - Returns: Localized string for `self`, if no key exists it returns `self`
-    public func localized(from staticString: NSDictionary) -> String {
+    func localized(from staticString: NSDictionary) -> String {
         if let s = staticString.value(forKeyPath: "\(self).value") as? String {
             return s.replacingOccurrences(of: "\\n", with: "\n")
         } else {
@@ -43,7 +43,7 @@ public extension String {
     ///   - width: Minumum required characters
     ///   - padString: String to append `self` with
     /// - Returns: Leftpadded string
-    public func leftPad(toWidth width: Int, withString padString: String) -> String {
+    func leftPad(toWidth width: Int, withString padString: String) -> String {
         guard self.count < width else { return self }
         let remainingLength: Int = width - self.count
         return [String(repeating: padString, count: remainingLength), self].joined(separator: "")
@@ -53,7 +53,7 @@ public extension String {
     /// Check if `self` is a valid email address
     ///
     /// - Returns: Boolean if `self` is valid email address
-    public func isValidEmail() -> Bool {
+    func isValidEmail() -> Bool {
         // print("validate calendar: \(testStr)")
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
         
@@ -65,7 +65,7 @@ public extension String {
     /// URLEncode `self`
     ///
     /// - Returns: URLENcoded `self`
-    public func encodeUrl() -> String {
+    func encodeUrl() -> String {
         return self.addingPercentEncoding( withAllowedCharacters: NSCharacterSet.urlQueryAllowed) ?? self
     }
     
@@ -73,7 +73,7 @@ public extension String {
     /// URLDecode `self`
     ///
     /// - Returns: URLDecoded `self`
-    public func decodeUrl() -> String {
+    func decodeUrl() -> String {
         return self.removingPercentEncoding ?? self
     }
     
