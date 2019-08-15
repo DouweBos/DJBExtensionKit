@@ -35,7 +35,7 @@ public extension UIViewController {
 }
 
 //Override URLNavigator's topMost UIViewController extension
-public extension UIViewController {
+extension UIViewController {
     
     /// Returns the current application's top most view controller.
     open class var topMost: UIViewController? {
