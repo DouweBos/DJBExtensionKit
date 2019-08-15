@@ -12,7 +12,7 @@ import ObjectiveC
 @IBDesignable
 public extension UIImageView {
 
-    override public func layoutSubviews() {
+    override open func layoutSubviews() {
         super.layoutSubviews()
         if focusOnFaces {
             setImageAndFocusOnFaces(image: self.image)
