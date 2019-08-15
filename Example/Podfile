@@ -1,0 +1,6 @@
+use_frameworks!
+target 'DJBExtensionKit_Tests' do
+  pod 'DJBExtensionKit', :path => '../'
+  
+  
+end

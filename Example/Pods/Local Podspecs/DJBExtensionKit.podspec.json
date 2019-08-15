@@ -1,0 +1,22 @@
+{
+  "name": "DJBExtensionKit",
+  "version": "0.1.0",
+  "summary": "A short description of DJBExtensionKit.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/DouweBos/DJBExtensionKit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "DouweBos": "d.bos@hotmail.com"
+  },
+  "source": {
+    "git": "https://github.com/DouweBos/DJBExtensionKit.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "DJBExtensionKit/Classes/**/*"
+}

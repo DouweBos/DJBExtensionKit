@@ -1,0 +1,16 @@
+PODS:
+  - DJBExtensionKit (0.1.0)
+
+DEPENDENCIES:
+  - DJBExtensionKit (from `../`)
+
+EXTERNAL SOURCES:
+  DJBExtensionKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  DJBExtensionKit: 36cc53badb4a205d4f7faeabf68e62dd4d4e0a44
+
+PODFILE CHECKSUM: 09b35770df3fa80b1d8913cf1baab949d0e06084
+
+COCOAPODS: 1.7.1
