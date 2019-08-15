@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-extension String {
+public extension String {
     
     
     /// Returns localized string for given keypath. Strings are stored in RGString.plist

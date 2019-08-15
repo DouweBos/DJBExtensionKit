@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIView {
+public extension UIView {
     func roundCorners(_ corners: UIRectCorner, radius: CGFloat) {
         let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
         let mask = CAShapeLayer()
@@ -17,7 +17,7 @@ extension UIView {
     }
 }
 
-extension UIView {
+public extension UIView {
     
     @IBInspectable var cornerRadius: CGFloat {
         get {

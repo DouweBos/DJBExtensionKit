@@ -7,7 +7,7 @@
 //
 
 #if canImport(RangeSeekSlider)
-extension RangeSeekSlider {
+public extension RangeSeekSlider {
     func didSetValues() -> Bool {
         return selectedMinValue != minValue || selectedMaxValue != maxValue
     }

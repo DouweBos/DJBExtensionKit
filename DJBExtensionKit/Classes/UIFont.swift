@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIFont {
+public extension UIFont {
     
     
     /// Return a medium font version for the given font family of the given size.

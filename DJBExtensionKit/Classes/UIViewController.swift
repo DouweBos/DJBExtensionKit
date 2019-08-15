@@ -9,7 +9,7 @@
 import UIKit
 
 
-extension UIViewController {
+public extension UIViewController {
     
     /// Get ClassName for UIViewController
     var className: String {
@@ -17,7 +17,7 @@ extension UIViewController {
     }
 }
 
-extension UIViewController {
+public extension UIViewController {
     
     /// Initialize a UIViewController from storyboard with given name. Will crash if storyboard does not exist or has no initial viewcontroller
     ///
@@ -35,7 +35,7 @@ extension UIViewController {
 }
 
 //Override URLNavigator's topMost UIViewController extension
-extension UIViewController {
+public extension UIViewController {
     
     /// Returns the current application's top most view controller.
     open class var topMost: UIViewController? {

@@ -9,7 +9,7 @@
 #if canImport(RxSwift)
 import RxSwift
 
-extension ObservableType {
+public extension ObservableType {
     func currentAndPrevious() -> Observable<(current: E, previous: E?)> {
         return self.multicast({ () -> PublishSubject<E> in PublishSubject<E>() }) { (values: Observable<E>) -> Observable<(current: E, previous: E?)> in
             let pastValues = values.asObservable().map { previous -> E? in previous }.startWith(nil)

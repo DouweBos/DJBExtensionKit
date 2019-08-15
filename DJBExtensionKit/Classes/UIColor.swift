@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIColor {
+public extension UIColor {
     
     
     /// Convenience init to initialize an UIColor object without all those `/255.0`

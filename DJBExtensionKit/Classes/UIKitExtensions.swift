@@ -11,7 +11,7 @@ import UIKit
 
 // MARK: - UIBarItem extension -
 
-extension UIBarItem {
+public extension UIBarItem {
     var view: UIView? {
         if let item = self as? UIBarButtonItem, let customView = item.customView {
             return customView
@@ -22,7 +22,7 @@ extension UIBarItem {
 
 // MARK: - UIView extension -
 
-extension UIView {
+public extension UIView {
     
     func hasSuperview(_ superview: UIView) -> Bool{
         return viewHasSuperview(self, superview: superview)
@@ -43,7 +43,7 @@ extension UIView {
 
 // MARK: - CGRect extension -
 
-extension CGRect {
+public extension CGRect {
     var x: CGFloat {
         get {
             return self.origin.x
@@ -96,7 +96,7 @@ extension CGRect {
     }
 }
 
-extension CGRect {
+public extension CGRect {
     func with(x: CGFloat? = nil, y: CGFloat? = nil, width: CGFloat? = nil, height: CGFloat? = nil) -> CGRect {
         return CGRect(x: x ?? self.x, y: y ?? self.y, width: width ?? self.width, height: height ?? self.height)
     }

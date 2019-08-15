@@ -9,7 +9,7 @@
 #if canImport(Kingfisher)
 import Kingfisher
 
-extension Kingfisher where Base: ImageView {
+public extension Kingfisher where Base: ImageView {
     public func setSourceImage(for source: String,
                                imageFailCheck: @escaping (() -> Bool) = { return true }) {
         let sourceImageUrl = URL(string: RGSettingsService.remoteSourceImageUrl(for: source))
@@ -24,7 +24,7 @@ extension Kingfisher where Base: ImageView {
     }
 }
 
-extension Kingfisher where Base: Button {
+public extension Kingfisher where Base: Button {
     public func setSourceImage(for source: String, controlState: UIControl.State) {
         let sourceImageUrl = URL(string: RGSettingsService.remoteSourceImageUrl(for: source))
         
@@ -50,7 +50,7 @@ extension Kingfisher where Base: Button {
     }
 }
 
-extension Kingfisher where Base: ImageView {
+public extension Kingfisher where Base: ImageView {
     public func setImage(with resource: Resource?,
                          placeholder: UIImage? = nil,
                          options: KingfisherOptionsInfo? = nil,

@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UITableView {
+public extension UITableView {
     func animateChanges(duration: TimeInterval, completion: ((Bool) -> Swift.Void)? = nil) {
         UIView.animate(withDuration: duration,
                        delay: 0.0,

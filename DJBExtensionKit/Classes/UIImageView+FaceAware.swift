@@ -10,9 +10,9 @@ import UIKit
 import ObjectiveC
 
 @IBDesignable
-extension UIImageView {
+public extension UIImageView {
 
-    override open func layoutSubviews() {
+    override public func layoutSubviews() {
         super.layoutSubviews()
         if focusOnFaces {
             setImageAndFocusOnFaces(image: self.image)
@@ -24,7 +24,7 @@ extension UIImageView {
     }
 
     @IBInspectable
-    public var debugFaceAware: Bool {
+    var debugFaceAware: Bool {
         set {
             objc_setAssociatedObject(self, &AssociatedCustomProperties.debugFaceAware, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         } get {
@@ -37,7 +37,7 @@ extension UIImageView {
     }
 
     @IBInspectable
-    public var focusOnFaces: Bool {
+    var focusOnFaces: Bool {
         set {
             let image = self.image
             self.image = nil

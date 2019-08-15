@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension NSTextAttachment {
+public extension NSTextAttachment {
     static func getCenteredImageAttachment(with imageName: String,
                                            and font: UIFont?) -> NSTextAttachment? {
         

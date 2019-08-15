@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIImage {
+public extension UIImage {
     class func colorForNavBar(color: UIColor) -> UIImage {
         let rect = CGRect(x: 0.0, y: 0.0, width: 1.0, height: 1.0)
         //    Or if you need a thinner border :
@@ -35,7 +35,7 @@ extension UIImage {
 
 import KingFisher
 
-extension UIImage {
+public extension UIImage {
     class func storeImageInFile(source: String, image: UIImage?) {
         guard let image = image else { return }
         
@@ -84,7 +84,7 @@ extension UIImage {
 }
 #endif
 
-extension UIImage {
+public extension UIImage {
     
     func imageUpMirror() -> UIImage {
         guard let cgImage = cgImage else { return self }

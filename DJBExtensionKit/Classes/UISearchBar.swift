@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UISearchBar {
+public extension UISearchBar {
     func changeSearchBarColor(fieldColor: UIColor, backColor: UIColor, borderColor: UIColor?) {
         UIGraphicsBeginImageContext(bounds.size)
         backColor.setFill()
