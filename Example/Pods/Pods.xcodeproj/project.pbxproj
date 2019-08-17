@@ -31,7 +31,6 @@
 		D9FB177C23055D040030FFBE /* UIImageView+FaceAware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FB176623055D030030FFBE /* UIImageView+FaceAware.swift */; };
 		D9FB177D23055D040030FFBE /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FB176723055D030030FFBE /* UIView.swift */; };
 		D9FB177E23055D040030FFBE /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FB176823055D040030FFBE /* UICollectionView.swift */; };
-		D9FB177F23055D040030FFBE /* RangeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FB176923055D040030FFBE /* RangeSlider.swift */; };
 		D9FB178023055D040030FFBE /* UIKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FB176A23055D040030FFBE /* UIKitExtensions.swift */; };
 		D9FB178123055D040030FFBE /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FB176B23055D040030FFBE /* UITableView.swift */; };
 		FCDE17257E4BB438A48BBAAD7A57CE3D /* DJBExtensionKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F824D3D8CD633B9934C65B5AB411EFA /* DJBExtensionKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -85,7 +84,6 @@
 		D9FB176623055D030030FFBE /* UIImageView+FaceAware.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImageView+FaceAware.swift"; path = "DJBExtensionKit/Classes/UIImageView+FaceAware.swift"; sourceTree = "<group>"; };
 		D9FB176723055D030030FFBE /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIView.swift; path = DJBExtensionKit/Classes/UIView.swift; sourceTree = "<group>"; };
 		D9FB176823055D040030FFBE /* UICollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UICollectionView.swift; path = DJBExtensionKit/Classes/UICollectionView.swift; sourceTree = "<group>"; };
-		D9FB176923055D040030FFBE /* RangeSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RangeSlider.swift; path = DJBExtensionKit/Classes/RangeSlider.swift; sourceTree = "<group>"; };
 		D9FB176A23055D040030FFBE /* UIKitExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIKitExtensions.swift; path = DJBExtensionKit/Classes/UIKitExtensions.swift; sourceTree = "<group>"; };
 		D9FB176B23055D040030FFBE /* UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UITableView.swift; path = DJBExtensionKit/Classes/UITableView.swift; sourceTree = "<group>"; };
 		DB0DBB4ACCA781A9E30B582F63205CC8 /* Pods-DJBExtensionKit_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DJBExtensionKit_Tests-dummy.m"; sourceTree = "<group>"; };
@@ -123,7 +121,6 @@
 				D9FB175A23055D030030FFBE /* Date.swift */,
 				D9FB175F23055D030030FFBE /* Kingfisher.swift */,
 				D9FB175623055D020030FFBE /* NSTextAttachment.swift */,
-				D9FB176923055D040030FFBE /* RangeSlider.swift */,
 				D9FB175E23055D030030FFBE /* RxSwift.swift */,
 				D9FB175723055D020030FFBE /* String.swift */,
 				D9FB175D23055D030030FFBE /* UIButton.swift */,
@@ -365,7 +362,6 @@
 				D9FB177723055D040030FFBE /* Array.swift in Sources */,
 				D9FB177C23055D040030FFBE /* UIImageView+FaceAware.swift in Sources */,
 				D9FB176C23055D040030FFBE /* NSTextAttachment.swift in Sources */,
-				D9FB177F23055D040030FFBE /* RangeSlider.swift in Sources */,
 				D9FB177923055D040030FFBE /* UIFont.swift in Sources */,
 				D9FB177523055D040030FFBE /* Kingfisher.swift in Sources */,
 				D9FB177B23055D040030FFBE /* UIImage.swift in Sources */,

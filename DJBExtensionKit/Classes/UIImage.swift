@@ -31,59 +31,6 @@ public extension UIImage {
     }
 }
 
-#if canImport(KingFisher)
-
-import KingFisher
-
-public extension UIImage {
-    class func storeImageInFile(source: String, image: UIImage?) {
-        guard let image = image else { return }
-        
-        ImageCache.default.store(image, forKey: "\(RG_SOURCE_IMAGE_CACHE_FILE)-\(source).png")
-//
-//        if let data = UIImagePNGRepresentation(image) {
-//            let filename = getDocumentsDirectory().appendingPathComponent("\(RG_SOURCE_IMAGE_CACHE_FILE)-\(source).png")
-//            try? data.write(to: filename)
-//        }
-    }
-    
-    class func getImageFromFile(source: String) -> UIImage? {
-        return ImageCache.default.retrieveImageInDiskCache(forKey: "\(RG_SOURCE_IMAGE_CACHE_FILE)-\(source).png")
-        
-//        let filename = getDocumentsDirectory().appendingPathComponent("\(RG_SOURCE_IMAGE_CACHE_FILE)-\(source).png").path
-//
-//        if FileManager.default.fileExists(atPath: filename) {
-//            return UIImage(contentsOfFile: filename)
-//        }
-//
-//        return nil
-    }
-    
-    class func storeImageInFile(person: String, image: UIImage?) {
-        guard let image = image else { return }
-        
-        ImageCache.default.store(image, forKey: "\(RG_PERSON_IMAGE_CACHE_FILE)-\(person.replacingOccurrences(of: " ", with: "_")).png")
-        //
-        //        if let data = UIImagePNGRepresentation(image) {
-        //            let filename = getDocumentsDirectory().appendingPathComponent("\(RG_SOURCE_IMAGE_CACHE_FILE)-\(source).png")
-        //            try? data.write(to: filename)
-        //        }
-    }
-    
-    class func getImageFromFile(person: String) -> UIImage? {
-        return ImageCache.default.retrieveImageInDiskCache(forKey: "\(RG_PERSON_IMAGE_CACHE_FILE)-\(person.replacingOccurrences(of: " ", with: "_")).png")
-        
-        //        let filename = getDocumentsDirectory().appendingPathComponent("\(RG_SOURCE_IMAGE_CACHE_FILE)-\(source).png").path
-        //
-        //        if FileManager.default.fileExists(atPath: filename) {
-        //            return UIImage(contentsOfFile: filename)
-        //        }
-        //
-        //        return nil
-    }
-}
-#endif
-
 public extension UIImage {
     
     func imageUpMirror() -> UIImage {

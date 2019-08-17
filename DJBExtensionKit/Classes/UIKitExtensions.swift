@@ -23,7 +23,6 @@ public extension UIBarItem {
 // MARK: - UIView extension -
 
 public extension UIView {
-    
     func hasSuperview(_ superview: UIView) -> Bool{
         return viewHasSuperview(self, superview: superview)
     }
@@ -91,7 +90,7 @@ public extension CGRect {
 //        return self.maxY
 //    }
     
-    var center: CGPoint {
+    var centerRect: CGPoint {
         return CGPoint(x: self.x + self.width / 2, y: self.y + self.height / 2)
     }
 }

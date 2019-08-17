@@ -6,49 +6,8 @@
 //  Copyright © 2019 DJBSoftware. All rights reserved.
 //
 
-#if canImport(Kingfisher)
+#if DJB_EXT_OFFER_KINGFISHER
 import Kingfisher
-
-public extension Kingfisher where Base: ImageView {
-    public func setSourceImage(for source: String,
-                               imageFailCheck: @escaping (() -> Bool) = { return true }) {
-        let sourceImageUrl = URL(string: RGSettingsService.remoteSourceImageUrl(for: source))
-        self.setImage(with: sourceImageUrl,
-                      placeholder: UIImage.placeholderImageForSource(source: source),
-                      imageFailCheck: imageFailCheck)
-    }
-    
-    public func setMediaImage(for item: String) {
-        //let sourceImageUrl = URL(string: RGSettingsService.remoteSourceImageUrl(for: source))
-        //self.setImage(with: sourceImageUrl, placeholder: UIImage.placeholderImageForSource(source: source), options: nil, progressBlock: nil, completionHandler: nil)
-    }
-}
-
-public extension Kingfisher where Base: Button {
-    public func setSourceImage(for source: String, controlState: UIControl.State) {
-        let sourceImageUrl = URL(string: RGSettingsService.remoteSourceImageUrl(for: source))
-        
-        guard source != RG_SOURCE_BUY_KEY &&
-            source != RG_SOURCE_RENT_KEY &&
-            source != RG_SOURCE_MORE_KEY
-            else {
-                self.base.setImage(UIImage.placeholderImageForSource(source: source), for: .normal)
-                return
-        }
-        
-        self.setBackgroundImage(with: sourceImageUrl,
-                                for: controlState,
-                                placeholder: UIImage.placeholderImageForSource(source: source),
-                                options: nil,
-                                progressBlock: nil,
-                                completionHandler: nil)
-    }
-    
-    public func setMediaImage(for item: String) {
-        //let sourceImageUrl = URL(string: RGSettingsService.remoteSourceImageUrl(for: source))
-        //self.setImage(with: sourceImageUrl, placeholder: UIImage.placeholderImageForSource(source: source), options: nil, progressBlock: nil, completionHandler: nil)
-    }
-}
 
 public extension Kingfisher where Base: ImageView {
     public func setImage(with resource: Resource?,

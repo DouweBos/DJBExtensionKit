@@ -6,11 +6,11 @@
 //  Copyright © 2019 DJBSoftware. All rights reserved.
 //
 
-#if canImport(RxSwift)
+#if DJB_EXT_OFFER_RXSWIFT
 import RxSwift
 
 public extension ObservableType {
-    func currentAndPrevious() -> Observable<(current: E, previous: E?)> {
+    public func currentAndPrevious() -> Observable<(current: E, previous: E?)> {
         return self.multicast({ () -> PublishSubject<E> in PublishSubject<E>() }) { (values: Observable<E>) -> Observable<(current: E, previous: E?)> in
             let pastValues = values.asObservable().map { previous -> E? in previous }.startWith(nil)
             return Observable.zip(values.asObservable(), pastValues) { (current, previous) in

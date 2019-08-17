@@ -41,4 +41,16 @@ Just a collection of extensions I like to use. This is just so I no longer have 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
+  
+  s.subspec 'RxSwift' do |rxswift|
+    rxswift.xcconfig =
+    { 'OTHER_SWIFT_FLAGS' => '$(inherited) -DDJB_EXT_OFFER_RXSWIFT' }
+    rxswift.dependency 'RxSwift'
+  end
+  
+  s.subspec 'Kingfisher' do |kingfisher|
+    kingfisher.xcconfig  =
+    { 'OTHER_SWIFT_FLAGS' => '$(inherited) -DDJB_EXT_OFFER_KINGFISHER' }
+    kingfisher.dependency 'Kingfisher'
+  end
 end
