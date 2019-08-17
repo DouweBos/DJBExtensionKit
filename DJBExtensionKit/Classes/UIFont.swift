@@ -37,7 +37,7 @@ public extension UIFont {
     ///   - family: Font family
     ///   - size: Font size
     /// - Returns: Font
-    static func extraBoldFont(ofFamily family: String, for size: CGFloat) -> UIFont? {
+    static func extraBoldFont(ofFamily family: String, ofSize size: CGFloat) -> UIFont? {
         return UIFont(name: "\(family)-Extrabld", size: size)
     }
 }
