@@ -17,7 +17,7 @@ public extension UIFont {
     ///   - family: Font family
     ///   - size: Font size
     /// - Returns: Font
-    static func mediumFont(of family: String, for size: CGFloat) -> UIFont? {
+    static func mediumFont(ofFamily family: String, ofSize size: CGFloat) -> UIFont? {
         return UIFont(name: "\(family)-Medium", size: size)
     }
     
@@ -27,7 +27,7 @@ public extension UIFont {
     ///   - family: Font family
     ///   - size: Font size
     /// - Returns: Font
-    static func boldFont(of family: String, for size: CGFloat) -> UIFont? {
+    static func boldFont(ofFamily family: String, ofSize size: CGFloat) -> UIFont? {
         return UIFont(name: "\(family)-Bold", size: size)
     }
     
@@ -37,7 +37,7 @@ public extension UIFont {
     ///   - family: Font family
     ///   - size: Font size
     /// - Returns: Font
-    static func extraBoldFont(of family: String, for size: CGFloat) -> UIFont? {
+    static func extraBoldFont(ofFamily family: String, for size: CGFloat) -> UIFont? {
         return UIFont(name: "\(family)-Extrabld", size: size)
     }
 }

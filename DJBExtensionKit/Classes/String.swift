@@ -9,15 +9,19 @@
 import Foundation
 import UIKit
 
+public var LOCALIZED_STRINGS_DICTIONARY: NSDictionary?
+
 public extension String {
-    
+    static func setLocalizedStringsDictionary(with value: NSDictionary) {
+        LOCALIZED_STRINGS_DICTIONARY = value
+    }
     
     /// Returns localized string for given keypath. Strings are stored in RGString.plist
     ///
     /// - Parameter keyPath: key under which the localized string is stored
     /// - Returns: Localized string for key, if no localized string exists it returns the key
-    static func localizedString(for keyPath: String, from staticString: NSDictionary) -> String {
-        if let s = staticString.value(forKeyPath: "\(keyPath).value") as? String {
+    static func localizedString(for keyPath: String, from staticString: NSDictionary? = LOCALIZED_STRINGS_DICTIONARY) -> String {
+        if let s = staticString?.value(forKeyPath: "\(keyPath).value") as? String {
             return s.replacingOccurrences(of: "\\n", with: "\n")
         } else {
             return keyPath
@@ -28,8 +32,8 @@ public extension String {
     /// Returns localized string using `self` as key
     ///
     /// - Returns: Localized string for `self`, if no key exists it returns `self`
-    func localized(from staticString: NSDictionary) -> String {
-        if let s = staticString.value(forKeyPath: "\(self).value") as? String {
+    func localized(from staticString: NSDictionary? = LOCALIZED_STRINGS_DICTIONARY) -> String {
+        if let s = staticString?.value(forKeyPath: "\(self).value") as? String {
             return s.replacingOccurrences(of: "\\n", with: "\n")
         } else {
             return self
