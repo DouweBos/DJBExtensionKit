@@ -10,7 +10,7 @@
 import Kingfisher
 
 public extension Kingfisher where Base: ImageView {
-    public func setImage(with resource: Resource?,
+    func setImage(with resource: Resource?,
                          placeholder: UIImage? = nil,
                          options: KingfisherOptionsInfo? = nil,
                          progressBlock: DownloadProgressBlock? = nil,
@@ -50,7 +50,7 @@ public extension Kingfisher where Base: ImageView {
         }
     }
     
-    public func setImage(with resources: [Resource?]?,
+    func setImage(with resources: [Resource?]?,
                          placeholder: UIImage? = nil,
                          options: KingfisherOptionsInfo? = nil,
                          progressBlock: DownloadProgressBlock? = nil,
