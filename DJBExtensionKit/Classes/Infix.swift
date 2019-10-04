@@ -7,7 +7,12 @@
 
 import Foundation
 
-infix operator ~>
+precedencegroup ForwardPipe {
+    associativity: left
+    higherThan: LogicalConjunctionPrecedence
+}
+
+infix operator ~>: ForwardPipe
 func ~><T, U>(value: T, next: ((T) -> U)) -> U {
     return next(value)
 }
