@@ -12,7 +12,8 @@
 		6458FC37C5367B52AE2110F419AB6ADC /* Pods-DJBExtensionKit_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0DBB4ACCA781A9E30B582F63205CC8 /* Pods-DJBExtensionKit_Tests-dummy.m */; };
 		7974CCE4CBF716827ED3EA36C432826D /* Pods-DJBExtensionKit_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E0831DC095D29E40463B9E8716F53AE7 /* Pods-DJBExtensionKit_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		916448CF42B02FD28821B4A9D4BB0475 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		D95547EF2309420A00B3CAF1 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95547EE2309420A00B3CAF1 /* Bundle.swift */; };
+		D9D3EBF92347A0610059F8B3 /* Infix.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D3EBF82347A0610059F8B3 /* Infix.swift */; };
+		D9D3EBFB2347A0C00059F8B3 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D3EBFA2347A0C00059F8B3 /* Bundle.swift */; };
 		D9FB176C23055D040030FFBE /* NSTextAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FB175623055D020030FFBE /* NSTextAttachment.swift */; };
 		D9FB176D23055D040030FFBE /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FB175723055D020030FFBE /* String.swift */; };
 		D9FB176E23055D040030FFBE /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FB175823055D020030FFBE /* Collection.swift */; };
@@ -66,7 +67,8 @@
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9F824D3D8CD633B9934C65B5AB411EFA /* DJBExtensionKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DJBExtensionKit-umbrella.h"; sourceTree = "<group>"; };
 		AB349BBABE1303708918C33B19DAC246 /* DJBExtensionKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DJBExtensionKit.xcconfig; sourceTree = "<group>"; };
-		D95547EE2309420A00B3CAF1 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
+		D9D3EBF82347A0610059F8B3 /* Infix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Infix.swift; path = DJBExtensionKit/Classes/Infix.swift; sourceTree = "<group>"; };
+		D9D3EBFA2347A0C00059F8B3 /* Bundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Bundle.swift; path = DJBExtensionKit/Classes/Bundle.swift; sourceTree = "<group>"; };
 		D9FB175623055D020030FFBE /* NSTextAttachment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSTextAttachment.swift; path = DJBExtensionKit/Classes/NSTextAttachment.swift; sourceTree = "<group>"; };
 		D9FB175723055D020030FFBE /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = String.swift; path = DJBExtensionKit/Classes/String.swift; sourceTree = "<group>"; };
 		D9FB175823055D020030FFBE /* Collection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Collection.swift; path = DJBExtensionKit/Classes/Collection.swift; sourceTree = "<group>"; };
@@ -117,8 +119,10 @@
 		05EB44E58551B4752E4406B1C0DB3352 /* DJBExtensionKit */ = {
 			isa = PBXGroup;
 			children = (
+				D9D3EBFA2347A0C00059F8B3 /* Bundle.swift */,
 				D9FB176123055D030030FFBE /* Array.swift */,
 				D9FB176223055D030030FFBE /* Bool.swift */,
+				D9D3EBF82347A0610059F8B3 /* Infix.swift */,
 				D9FB175823055D020030FFBE /* Collection.swift */,
 				D9FB175A23055D030030FFBE /* Date.swift */,
 				D9FB175F23055D030030FFBE /* Kingfisher.swift */,
@@ -140,7 +144,6 @@
 				D9FB176023055D030030FFBE /* UIViewController.swift */,
 				FB94EF0F3EA08ABE75B417E4E243F297 /* Pod */,
 				B9408433D82DAD10830DBBD2D082BE21 /* Support Files */,
-				D95547EE2309420A00B3CAF1 /* Bundle.swift */,
 			);
 			name = DJBExtensionKit;
 			path = ../..;
@@ -348,6 +351,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9FB177D23055D040030FFBE /* UIView.swift in Sources */,
+				D9D3EBFB2347A0C00059F8B3 /* Bundle.swift in Sources */,
 				3437D66D9BADF7D8A1C1E0692E91B05E /* DJBExtensionKit-dummy.m in Sources */,
 				D9FB176F23055D040030FFBE /* UIStackView.swift in Sources */,
 				D9FB177023055D040030FFBE /* Date.swift in Sources */,
@@ -359,7 +363,6 @@
 				D9FB177323055D040030FFBE /* UIButton.swift in Sources */,
 				D9FB177E23055D040030FFBE /* UICollectionView.swift in Sources */,
 				D9FB177623055D040030FFBE /* UIViewController.swift in Sources */,
-				D95547EF2309420A00B3CAF1 /* Bundle.swift in Sources */,
 				D9FB178023055D040030FFBE /* UIKitExtensions.swift in Sources */,
 				D9FB177823055D040030FFBE /* Bool.swift in Sources */,
 				D9FB177223055D040030FFBE /* UISearchBar.swift in Sources */,
@@ -367,6 +370,7 @@
 				D9FB177C23055D040030FFBE /* UIImageView+FaceAware.swift in Sources */,
 				D9FB176C23055D040030FFBE /* NSTextAttachment.swift in Sources */,
 				D9FB177923055D040030FFBE /* UIFont.swift in Sources */,
+				D9D3EBF92347A0610059F8B3 /* Infix.swift in Sources */,
 				D9FB177523055D040030FFBE /* Kingfisher.swift in Sources */,
 				D9FB177B23055D040030FFBE /* UIImage.swift in Sources */,
 				D9FB176D23055D040030FFBE /* String.swift in Sources */,
