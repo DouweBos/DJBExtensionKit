@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension Bundle {
+public extension Bundle {
     
     /**
      Locate an inner Bundle generated from CocoaPod packaging.

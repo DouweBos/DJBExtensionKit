@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DJBExtensionKit'
-  s.version          = '0.1.3'
+  s.version          = '0.1.4'
   s.summary          = 'Collection of personal extension I like to use.'
 
 # This description is used to generate tags and improve search results.
@@ -32,7 +32,7 @@ Just a collection of extensions I like to use. This is just so I no longer have 
   s.tvos.deployment_target = '9.0'
 
   s.source_files = 'DJBExtensionKit/Classes/**/*'
-  s.swift_version = '5.0'
+  s.swift_version = '5.1'
   
   # s.resource_bundles = {
   #   'DJBExtensionKit' => ['DJBExtensionKit/Assets/*.png']
