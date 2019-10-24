@@ -9,14 +9,14 @@
 #if DJB_EXT_OFFER_KINGFISHER
 import Kingfisher
 
-public extension Kingfisher where Base: ImageView {
+public extension KingfisherWrapper where Base: KFCrossPlatformImageView {
     func setImage(with resource: Resource?,
-                         placeholder: UIImage? = nil,
-                         options: KingfisherOptionsInfo? = nil,
-                         progressBlock: DownloadProgressBlock? = nil,
-                         imageFailCheck: @escaping (() -> Bool) = { return true },
-                         completionHandler: CompletionHandler? = nil)
-    {
+                  placeholder: UIImage? = nil,
+                  options: KingfisherOptionsInfo? = nil,
+                  progressBlock: DownloadProgressBlock? = nil,
+                  imageFailCheck: @escaping (() -> Bool) = { return true },
+                  completionHandler: ((Result<RetrieveImageResult, KingfisherError>) -> Void)? = nil) {
+
         DispatchQueue.main.async {
             self.base.image = placeholder ?? self.base.image
         }
@@ -30,20 +30,21 @@ public extension Kingfisher where Base: ImageView {
             //If the rgIDs don't match the cell has been reused by now and the image should no longer be set
             KingfisherManager.shared.retrieveImage(with: resource,
                                                    options: options,
-                                                   progressBlock: progressBlock) { (image, error, cacheType, imageURL) in
-                                                    if let _ = error {
-                                                        DispatchQueue.main.async {
-                                                            completionHandler?(image, error, cacheType, imageURL)
-                                                        }
-                                                    } else {
+                                                   progressBlock: progressBlock) { (result) in
+                                                    switch result {
+                                                    case .success(let imageResult):
                                                         DispatchQueue.main.async {
                                                             if imageFailCheck() {
-                                                                self.base.image = image
+                                                                self.base.image = imageResult.image
                                                                 
-                                                                completionHandler?(image, error, cacheType, imageURL)
+                                                                completionHandler?(result)
                                                             } else {
                                                                 //print("Did fail image check: \(imageURL?.absoluteString ?? "No URL")")
                                                             }
+                                                        }
+                                                    case .failure:
+                                                        DispatchQueue.main.async {
+                                                            completionHandler?(result)
                                                         }
                                                     }
             }
@@ -55,8 +56,8 @@ public extension Kingfisher where Base: ImageView {
                          options: KingfisherOptionsInfo? = nil,
                          progressBlock: DownloadProgressBlock? = nil,
                          imageFailCheck: @escaping (() -> Bool) = { return true },
-                         completionHandler: CompletionHandler? = nil)
-    {
+                         completionHandler: ((Result<RetrieveImageResult, KingfisherError>) -> Void)? = nil) {
+
         DispatchQueue.main.async {
             self.base.image = placeholder ?? self.base.image
         }
@@ -71,8 +72,19 @@ public extension Kingfisher where Base: ImageView {
                 //If the rgIDs don't match the cell has been reused by now and the image should no longer be set
                 KingfisherManager.shared.retrieveImage(with: resource,
                                                        options: options,
-                                                       progressBlock: progressBlock) { (image, error, cacheType, imageURL) in
-                                                        if let _ = error {
+                                                       progressBlock: progressBlock) { (result) in
+                                                        switch result {
+                                                        case .success(let imageResult):
+                                                            DispatchQueue.main.async {
+                                                                if imageFailCheck() {
+                                                                    self.base.image = imageResult.image
+                                                                    
+                                                                    completionHandler?(result)
+                                                                } else {
+                                                                    //print("Did fail image check: \(imageURL?.absoluteString ?? "No URL")")
+                                                                }
+                                                            }
+                                                        case .failure:
                                                             DispatchQueue.main.async {
                                                                 self.setImage(with: Array(resources.dropFirst()),
                                                                               placeholder: placeholder,
@@ -81,36 +93,8 @@ public extension Kingfisher where Base: ImageView {
                                                                               imageFailCheck: imageFailCheck,
                                                                               completionHandler: completionHandler)
                                                             }
-                                                        } else {
-                                                            DispatchQueue.main.async {
-                                                                if imageFailCheck() {
-                                                                    self.base.image = image
-                                                                    
-                                                                    completionHandler?(image, error, cacheType, imageURL)
-                                                                } else {
-                                                                    //print("Did fail image check: \(imageURL?.absoluteString ?? "No URL")")
-                                                                }
-                                                            }
                                                         }
                 }
-                
-                
-                //This is an old implementation of setting multiple resources to an image.
-                //I keep this around just in case something changes but the above implementation is sufficient for now
-                //            self.setImage(with: resource,
-                //                          placeholder: placeholder,
-                //                          options: options,
-                //                          progressBlock: progressBlock) { image, error, cacheType, imageURL in
-                //                            if let _ = error {
-                //                                self.setImage(with: Array(resources.dropFirst()),
-                //                                              placeholder: placeholder,
-                //                                              options: options,
-                //                                              progressBlock: progressBlock,
-                //                                              completionHandler: completionHandler)
-                //                            } else {
-                //                                completionHandler?(image, error, cacheType, imageURL)
-                //                            }
-                //                          }
             }
         }
     }

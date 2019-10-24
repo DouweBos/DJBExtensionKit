@@ -28,8 +28,8 @@ Just a collection of extensions I like to use. This is just so I no longer have 
   s.source           = { :git => 'https://github.com/DouweBos/DJBExtensionKit.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '9.0'
-  s.tvos.deployment_target = '9.0'
+  s.ios.deployment_target = '10.0'
+  s.tvos.deployment_target = '10.0'
 
   s.source_files = 'DJBExtensionKit/Classes/**/*'
   s.swift_version = '5.1'
