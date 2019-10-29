@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DJBExtensionKit'
-  s.version          = '0.2.0'
+  s.version          = '0.2.1'
   s.summary          = 'Collection of personal extension I like to use.'
 
 # This description is used to generate tags and improve search results.
@@ -40,12 +40,11 @@ Just a collection of extensions I like to use. This is just so I no longer have 
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
-  
+
   s.subspec 'RxSwift' do |rxswift|
     rxswift.xcconfig =
     { 'OTHER_SWIFT_FLAGS' => '$(inherited) -DDJB_EXT_OFFER_RXSWIFT' }
-    rxswift.dependency 'RxSwift'
+    rxswift.dependency 'RxSwift', '~> 5'
   end
   
   s.subspec 'Kingfisher' do |kingfisher|
