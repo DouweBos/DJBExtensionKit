@@ -62,6 +62,7 @@ public extension UICollectionView {
                 self?.setCollectionViewLayout(layout, animated: false)
             }) { [weak self] (completed) in
                 self?.collectionViewLayout.invalidateLayout()
+                completion?(completed)
             }
             
         }, completion: nil)
