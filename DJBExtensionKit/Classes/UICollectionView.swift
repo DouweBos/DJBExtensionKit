@@ -53,18 +53,25 @@ public extension UICollectionView {
     }
     
     func animateChanges(duration: TimeInterval, completion: ((Bool) -> Swift.Void)? = nil) {
-        UIView.animate(withDuration: duration, animations: { [weak self] in
-            guard let `self` = self else { return }
-            
-            let layout = self.collectionViewLayout
-            
-            self.performBatchUpdates({ [weak self] in
-                self?.setCollectionViewLayout(layout, animated: false)
-            }) { [weak self] (completed) in
-                self?.collectionViewLayout.invalidateLayout()
-                completion?(completed)
-            }
-            
-        }, completion: nil)
+        performBatchUpdates({}){ _ in }
+        
+        let layout = collectionViewLayout
+        setCollectionViewLayout(layout, animated: true)
+        collectionViewLayout.invalidateLayout()
+//
+//        UIView.animate(withDuration: duration, animations: { [weak self] in self?.layoutIfNeeded() }, completion: completion)
+//        UIView.animate(withDuration: duration, animations: { [weak self] in
+//            guard let `self` = self else { return }
+//
+//            let layout = self.collectionViewLayout
+//
+//            self.performBatchUpdates({ [weak self] in
+//                self?.setCollectionViewLayout(layout, animated: false)
+//            }) { [weak self] (completed) in
+//                self?.collectionViewLayout.invalidateLayout()
+//                completion?(completed)
+//            }
+//
+//        }, completion: nil)
     }
 }
