@@ -58,6 +58,10 @@ public extension UICollectionView {
         let layout = collectionViewLayout
         setCollectionViewLayout(layout, animated: true)
         collectionViewLayout.invalidateLayout()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            completion?(true)
+        }
 //
 //        UIView.animate(withDuration: duration, animations: { [weak self] in self?.layoutIfNeeded() }, completion: completion)
 //        UIView.animate(withDuration: duration, animations: { [weak self] in
