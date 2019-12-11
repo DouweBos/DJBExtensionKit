@@ -212,6 +212,9 @@
 		D6F48AAA3E9A5CB1D9C9C82FC847E7D0 /* Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD81EC2D0C251A901BCDE9F71620322 /* Kingfisher.swift */; };
 		D8CC0522668C9D2A14909FF562C08E95 /* RedirectHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB0B7E8035C6E79AFEA3D23A1EF3680 /* RedirectHandler.swift */; };
 		D92B8E26236B103600F769F2 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92B8E25236B103600F769F2 /* Double.swift */; };
+		D9CCBA7223A015F900048473 /* UICollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CCBA7123A015F900048473 /* UICollectionViewCell.swift */; };
+		D9CCBA7423A0163E00048473 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CCBA7323A0163E00048473 /* Protocols.swift */; };
+		D9CCBA7623A0170500048473 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CCBA7523A0170500048473 /* UITableViewCell.swift */; };
 		DA0998447CD679409F6DBA599604F147 /* Materialize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B635B09FC8509C803FFD89E10EB1269 /* Materialize.swift */; };
 		DA253E4233E9FC4967026E478CCD787F /* AsyncLock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DE19B8ACC6B4BC43112D0E612ECDCB /* AsyncLock.swift */; };
 		DB50F91C69070167BD05EFA04476E21C /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261C446981C39FB26BE0F2AE06CD16C0 /* Filter.swift */; };
@@ -503,6 +506,9 @@
 		D70381314AF6FB84B27F5CA90179BD74 /* DelaySubscription.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DelaySubscription.swift; path = RxSwift/Observables/DelaySubscription.swift; sourceTree = "<group>"; };
 		D92B8E25236B103600F769F2 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Double.swift; path = DJBExtensionKit/Classes/Double.swift; sourceTree = "<group>"; };
 		D99307160BFD03EEAFFDEEBC9F15A4D4 /* ImageProcessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageProcessor.swift; path = Sources/Image/ImageProcessor.swift; sourceTree = "<group>"; };
+		D9CCBA7123A015F900048473 /* UICollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UICollectionViewCell.swift; path = DJBExtensionKit/Classes/UICollectionViewCell.swift; sourceTree = "<group>"; };
+		D9CCBA7323A0163E00048473 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Protocols.swift; path = DJBExtensionKit/Classes/Protocols.swift; sourceTree = "<group>"; };
+		D9CCBA7523A0170500048473 /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UITableViewCell.swift; path = DJBExtensionKit/Classes/UITableViewCell.swift; sourceTree = "<group>"; };
 		DAC1AAD012858E56C0C326EEE159D2E4 /* UIStackView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIStackView.swift; path = DJBExtensionKit/Classes/UIStackView.swift; sourceTree = "<group>"; };
 		DB0DBB4ACCA781A9E30B582F63205CC8 /* Pods-DJBExtensionKit_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DJBExtensionKit_Tests-dummy.m"; sourceTree = "<group>"; };
 		DBC5EE712537EA65DEFF33BFD3748F43 /* PublishSubject.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PublishSubject.swift; path = RxSwift/Subjects/PublishSubject.swift; sourceTree = "<group>"; };
@@ -670,6 +676,9 @@
 				6D480104E8020C9C39D6DBC0CBFED17C /* Pod */,
 				A032AAE7E805A0DD90C7C30FA75A8D72 /* Support Files */,
 				D92B8E25236B103600F769F2 /* Double.swift */,
+				D9CCBA7123A015F900048473 /* UICollectionViewCell.swift */,
+				D9CCBA7323A0163E00048473 /* Protocols.swift */,
+				D9CCBA7523A0170500048473 /* UITableViewCell.swift */,
 			);
 			name = DJBExtensionKit;
 			path = ../..;
@@ -1172,12 +1181,15 @@
 				5E7CBE7F266A754B04E010691E867509 /* Bundle.swift in Sources */,
 				D3175779FA97D30A7B762FB2A1CF8423 /* Collection.swift in Sources */,
 				9A627FD299530E1ADD27DFFE0D2DEF59 /* Date.swift in Sources */,
+				D9CCBA7623A0170500048473 /* UITableViewCell.swift in Sources */,
 				3CA6F733C04017125B34ABAC1BEC4404 /* DJBExtensionKit-dummy.m in Sources */,
+				D9CCBA7223A015F900048473 /* UICollectionViewCell.swift in Sources */,
 				25BEECADAB0E7037BDFF30801CB8A045 /* Infix.swift in Sources */,
 				D6F48AAA3E9A5CB1D9C9C82FC847E7D0 /* Kingfisher.swift in Sources */,
 				D92B8E26236B103600F769F2 /* Double.swift in Sources */,
 				0BBD436A9FB6576859FBCEBBE4B0F316 /* NSTextAttachment.swift in Sources */,
 				9A0A82476EEADAB6331CA7F16369CC6E /* RxSwift.swift in Sources */,
+				D9CCBA7423A0163E00048473 /* Protocols.swift in Sources */,
 				18EAFFE871C7F792C51A0B396DB32631 /* String.swift in Sources */,
 				14860221BF825CDAF49C3FA878EBE356 /* UIButton.swift in Sources */,
 				847745BB69F1DDDBBF86232438A8E001 /* UICollectionView.swift in Sources */,
