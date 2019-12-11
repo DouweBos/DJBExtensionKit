@@ -9,6 +9,12 @@
 import UIKit
 
 public extension UITableView {
+    func register<T: UITableViewCell>(cell: T.Type) {
+        register(cell.nib, forCellReuseIdentifier: cell.reuseIdentifier)
+    }
+}
+
+public extension UITableView {
     func animateChanges(duration: TimeInterval, completion: ((Bool) -> Swift.Void)? = nil) {
         UIView.animate(withDuration: duration,
                        delay: 0.0,
