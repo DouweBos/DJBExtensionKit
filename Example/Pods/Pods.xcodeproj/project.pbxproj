@@ -212,6 +212,7 @@
 		D6F48AAA3E9A5CB1D9C9C82FC847E7D0 /* Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD81EC2D0C251A901BCDE9F71620322 /* Kingfisher.swift */; };
 		D8CC0522668C9D2A14909FF562C08E95 /* RedirectHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB0B7E8035C6E79AFEA3D23A1EF3680 /* RedirectHandler.swift */; };
 		D92B8E26236B103600F769F2 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92B8E25236B103600F769F2 /* Double.swift */; };
+		D9486D8423A3EE5400E4E3BB /* UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9486D8323A3EE5400E4E3BB /* UIWindow.swift */; };
 		D9CCBA7223A015F900048473 /* UICollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CCBA7123A015F900048473 /* UICollectionViewCell.swift */; };
 		D9CCBA7423A0163E00048473 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CCBA7323A0163E00048473 /* Protocols.swift */; };
 		D9CCBA7623A0170500048473 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CCBA7523A0170500048473 /* UITableViewCell.swift */; };
@@ -505,6 +506,7 @@
 		D5ACDEE2CC949D4565FE448099BF749C /* RxSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RxSwift.swift; path = DJBExtensionKit/Classes/RxSwift.swift; sourceTree = "<group>"; };
 		D70381314AF6FB84B27F5CA90179BD74 /* DelaySubscription.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DelaySubscription.swift; path = RxSwift/Observables/DelaySubscription.swift; sourceTree = "<group>"; };
 		D92B8E25236B103600F769F2 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Double.swift; path = DJBExtensionKit/Classes/Double.swift; sourceTree = "<group>"; };
+		D9486D8323A3EE5400E4E3BB /* UIWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIWindow.swift; path = DJBExtensionKit/Classes/UIWindow.swift; sourceTree = "<group>"; };
 		D99307160BFD03EEAFFDEEBC9F15A4D4 /* ImageProcessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageProcessor.swift; path = Sources/Image/ImageProcessor.swift; sourceTree = "<group>"; };
 		D9CCBA7123A015F900048473 /* UICollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UICollectionViewCell.swift; path = DJBExtensionKit/Classes/UICollectionViewCell.swift; sourceTree = "<group>"; };
 		D9CCBA7323A0163E00048473 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Protocols.swift; path = DJBExtensionKit/Classes/Protocols.swift; sourceTree = "<group>"; };
@@ -679,6 +681,7 @@
 				D9CCBA7123A015F900048473 /* UICollectionViewCell.swift */,
 				D9CCBA7323A0163E00048473 /* Protocols.swift */,
 				D9CCBA7523A0170500048473 /* UITableViewCell.swift */,
+				D9486D8323A3EE5400E4E3BB /* UIWindow.swift */,
 			);
 			name = DJBExtensionKit;
 			path = ../..;
@@ -1189,6 +1192,7 @@
 				D92B8E26236B103600F769F2 /* Double.swift in Sources */,
 				0BBD436A9FB6576859FBCEBBE4B0F316 /* NSTextAttachment.swift in Sources */,
 				9A0A82476EEADAB6331CA7F16369CC6E /* RxSwift.swift in Sources */,
+				D9486D8423A3EE5400E4E3BB /* UIWindow.swift in Sources */,
 				D9CCBA7423A0163E00048473 /* Protocols.swift in Sources */,
 				18EAFFE871C7F792C51A0B396DB32631 /* String.swift in Sources */,
 				14860221BF825CDAF49C3FA878EBE356 /* UIButton.swift in Sources */,
