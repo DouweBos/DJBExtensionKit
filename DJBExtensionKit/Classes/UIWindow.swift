@@ -8,7 +8,7 @@
 import UIKit
 
 public extension UIWindow {
-    func toast(message: String, font: UIFont, textColor: UIColor, backgroundColor: UIColor) {
+    func toast(message: String, font: UIFont, textColor: UIColor, backgroundColor: UIColor, bottom: CGFloat = 64) {
         let toastContainer = UIView(frame: CGRect())
         toastContainer.backgroundColor = backgroundColor
         toastContainer.alpha = 0.0
@@ -56,7 +56,7 @@ public extension UIWindow {
                                              toItem: toastContainer,
                                              attribute: .bottom,
                                              multiplier: 1,
-                                             constant: -16
+                                             constant: -12
         )
         let lableTop = NSLayoutConstraint(item: toastLabel,
                                           attribute: .top,
@@ -64,7 +64,7 @@ public extension UIWindow {
                                           toItem: toastContainer,
                                           attribute: .top,
                                           multiplier: 1,
-                                          constant: 16
+                                          constant: 12
         )
         let lableLeft = NSLayoutConstraint(item: toastLabel,
                                            attribute: .left,
@@ -98,7 +98,7 @@ public extension UIWindow {
                                                  toItem: self,
                                                  attribute: .bottom,
                                                  multiplier: 1,
-                                                 constant: -64
+                                                 constant: -1 * bottom
         )
         let containerLeft = NSLayoutConstraint(item: toastContainer,
                                                attribute: .right,
