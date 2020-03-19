@@ -8,7 +8,7 @@
 import UIKit
 
 public extension UIWindow {
-    func toast(message: String, font: UIFont, textColor: UIColor, backgroundColor: UIColor, bottom: CGFloat = 64) {
+    func toast(message: String, font: UIFont, textColor: UIColor, backgroundColor: UIColor, bottom: CGFloat = 100) {
         let toastContainer = UIView(frame: CGRect())
         toastContainer.backgroundColor = backgroundColor
         toastContainer.alpha = 0.0
