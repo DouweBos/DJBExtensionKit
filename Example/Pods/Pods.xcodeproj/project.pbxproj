@@ -211,6 +211,7 @@
 		D61E89853FDDC7D4A61CE98950822D67 /* Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = A359FB3F4D130337332DFE3A363A1533 /* Debug.swift */; };
 		D6F48AAA3E9A5CB1D9C9C82FC847E7D0 /* Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD81EC2D0C251A901BCDE9F71620322 /* Kingfisher.swift */; };
 		D8CC0522668C9D2A14909FF562C08E95 /* RedirectHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB0B7E8035C6E79AFEA3D23A1EF3680 /* RedirectHandler.swift */; };
+		D91D491A24294D5500B72988 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91D491924294D5500B72988 /* Reachability.swift */; };
 		D92B8E26236B103600F769F2 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92B8E25236B103600F769F2 /* Double.swift */; };
 		D9486D8423A3EE5400E4E3BB /* UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9486D8323A3EE5400E4E3BB /* UIWindow.swift */; };
 		D977C99323E84A780033116F /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = D977C99223E84A780033116F /* Optional.swift */; };
@@ -506,6 +507,7 @@
 		D482D74BD8BB95AF4580179BCA8CE09C /* RetryWhen.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RetryWhen.swift; path = RxSwift/Observables/RetryWhen.swift; sourceTree = "<group>"; };
 		D5ACDEE2CC949D4565FE448099BF749C /* RxSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RxSwift.swift; path = DJBExtensionKit/Classes/RxSwift.swift; sourceTree = "<group>"; };
 		D70381314AF6FB84B27F5CA90179BD74 /* DelaySubscription.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DelaySubscription.swift; path = RxSwift/Observables/DelaySubscription.swift; sourceTree = "<group>"; };
+		D91D491924294D5500B72988 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Reachability.swift; path = DJBExtensionKit/Classes/Reachability.swift; sourceTree = "<group>"; };
 		D92B8E25236B103600F769F2 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Double.swift; path = DJBExtensionKit/Classes/Double.swift; sourceTree = "<group>"; };
 		D9486D8323A3EE5400E4E3BB /* UIWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIWindow.swift; path = DJBExtensionKit/Classes/UIWindow.swift; sourceTree = "<group>"; };
 		D977C99223E84A780033116F /* Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Optional.swift; path = DJBExtensionKit/Classes/Optional.swift; sourceTree = "<group>"; };
@@ -685,6 +687,7 @@
 				D9CCBA7523A0170500048473 /* UITableViewCell.swift */,
 				D9486D8323A3EE5400E4E3BB /* UIWindow.swift */,
 				D977C99223E84A780033116F /* Optional.swift */,
+				D91D491924294D5500B72988 /* Reachability.swift */,
 			);
 			name = DJBExtensionKit;
 			path = ../..;
@@ -1200,6 +1203,7 @@
 				D9CCBA7423A0163E00048473 /* Protocols.swift in Sources */,
 				18EAFFE871C7F792C51A0B396DB32631 /* String.swift in Sources */,
 				14860221BF825CDAF49C3FA878EBE356 /* UIButton.swift in Sources */,
+				D91D491A24294D5500B72988 /* Reachability.swift in Sources */,
 				847745BB69F1DDDBBF86232438A8E001 /* UICollectionView.swift in Sources */,
 				B7FF9ECCD8C4420E6828F3C73E50639A /* UIColor.swift in Sources */,
 				249C91C3010509AB9E19E45B3A373C96 /* UIFont.swift in Sources */,

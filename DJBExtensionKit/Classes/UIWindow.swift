@@ -8,11 +8,19 @@
 import UIKit
 
 public extension UIWindow {
-    func toast(message: String, font: UIFont, textColor: UIColor, backgroundColor: UIColor, bottom: CGFloat = 100) {
+    func toast(
+        message: String,
+        font: UIFont,
+        textColor: UIColor,
+        backgroundColor: UIColor,
+        bottom: CGFloat = 100,
+        cornerRadius: CGFloat = 20.0
+    ) {
+
         let toastContainer = UIView(frame: CGRect())
         toastContainer.backgroundColor = backgroundColor
         toastContainer.alpha = 0.0
-        toastContainer.layer.cornerRadius = 20;
+        toastContainer.layer.cornerRadius = cornerRadius
         toastContainer.clipsToBounds  =  true
         toastContainer.layer.masksToBounds = true
         
