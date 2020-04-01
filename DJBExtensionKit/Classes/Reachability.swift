@@ -85,12 +85,12 @@ public struct Reachability {
     }
 
     public static func openWifiSettings() {
-        URL(string: UIApplication.openSettingsURLString).also {
-            UIApplication.shared.open($0)
-        }
+//        URL(string: UIApplication.openSettingsURLString).also {
+//            UIApplication.shared.open($0)
+//        }
     }
 
     public static func toggleWifi() {
-        openWifiSettings()
+        //openWifiSettings()
     }
 }
