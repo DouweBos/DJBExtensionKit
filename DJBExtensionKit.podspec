@@ -45,6 +45,9 @@ Just a collection of extensions I like to use. This is just so I no longer have 
     rxswift.xcconfig =
     { 'OTHER_SWIFT_FLAGS' => '$(inherited) -DDJB_EXT_OFFER_RXSWIFT' }
     rxswift.dependency 'RxSwift', '~> 5'
+    rxswift.dependency 'RxSwift', '~> 5'
+    rxswift.dependency 'RxSwiftExt', '~> 5'
+    rxswift.dependency 'RxCocoa', '~> 5'
   end
   
   s.subspec 'Kingfisher' do |kingfisher|
