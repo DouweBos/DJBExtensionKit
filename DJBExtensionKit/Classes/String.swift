@@ -127,4 +127,8 @@ public extension String {
     mutating func capitalizeFirstLetter() {
         self = self.capitalizingFirstLetter()
     }
+    
+    func getURLScheme() -> String? {
+        return self.components(separatedBy: "://").first
+    }
 }
