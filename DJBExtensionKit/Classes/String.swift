@@ -33,10 +33,14 @@ public extension String {
     ///
     /// - Returns: Localized string for `self`, if no key exists it returns `self`
     func localized(from staticString: NSDictionary? = LOCALIZED_STRINGS_DICTIONARY) -> String {
-        if let s = staticString?.value(forKeyPath: "\(self).value") as? String {
-            return s.replacingOccurrences(of: "\\n", with: "\n")
-        } else {
-            return self
+        do {
+            if let s = try staticString?.value(forKeyPath: "\(self).value") as? String {
+                return s.replacingOccurrences(of: "\\n", with: "\n")
+            } else {
+                return self
+            }
+        } catch let error {
+            print(error)
         }
     }
     
