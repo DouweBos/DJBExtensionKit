@@ -58,18 +58,6 @@ public extension String {
     }
     
     
-    /// Check if `self` is a valid email address
-    ///
-    /// - Returns: Boolean if `self` is valid email address
-    func isValidEmail() -> Bool {
-        // print("validate calendar: \(testStr)")
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
-        
-        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-        return emailTest.evaluate(with: self)
-    }
-    
-    
     /// URLEncode `self`
     ///
     /// - Returns: URLENcoded `self`
@@ -167,5 +155,42 @@ public extension StringProtocol {
                     index(range.lowerBound, offsetBy: 1, limitedBy: endIndex) ?? endIndex
         }
         return result
+    }
+}
+
+struct Regex {
+    private init() {}
+
+    static let ipAddress = "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"
+    static let hostname = "^(([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9\\-]*[a-zA-Z0-9])\\.)*([A-Za-z0-9]|[A-Za-z0-9][A-Za-z0-9\\-]*[A-Za-z0-9])$"
+    
+    static let email = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+}
+
+public extension String {
+    var isValidIpAddress: Bool {
+        return self.matches(pattern: Regex.ipAddress)
+    }
+
+    var isValidHostname: Bool {
+        return self.matches(pattern: Regex.hostname)
+    }
+    
+    var isValidEmail: Bool {
+        return self.matches(pattern: Regex.email)
+    }
+
+    private func matches(pattern: String) -> Bool {
+        return self.range(of: pattern,
+                          options: .regularExpression,
+                          range: nil,
+                          locale: nil) != nil
+    }
+}
+
+public extension String {
+    var isBackspace: Bool {
+        let char = self.cString(using: String.Encoding.utf8)!
+        return strcmp(char, "\\b") == -92
     }
 }
