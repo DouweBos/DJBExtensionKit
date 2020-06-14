@@ -14,4 +14,10 @@ public extension UIButton {
         titleLabel?.transform = CGAffineTransform(scaleX: -1.0, y: 1.0)
         imageView?.transform = CGAffineTransform(scaleX: -1.0, y: 1.0)
     }
+    
+    func imageToLeft() {
+        transform = CGAffineTransform.identity
+        titleLabel?.transform = CGAffineTransform.identity
+        imageView?.transform = CGAffineTransform.identity
+    }
 }

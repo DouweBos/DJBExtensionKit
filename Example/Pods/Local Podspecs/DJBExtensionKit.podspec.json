@@ -1,6 +1,6 @@
 {
   "name": "DJBExtensionKit",
-  "version": "0.1.6",
+  "version": "0.3",
   "summary": "Collection of personal extension I like to use.",
   "description": "Just a collection of extensions I like to use. This is just so I no longer have to copy everything over from project to project. Please do not actually use me.",
   "homepage": "https://github.com/DouweBos/DJBExtensionKit",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/DouweBos/DJBExtensionKit.git",
-    "tag": "0.1.6"
+    "tag": "0.3"
   },
   "platforms": {
     "ios": "10.0",
@@ -29,7 +29,13 @@
       },
       "dependencies": {
         "RxSwift": [
-
+          "~> 5"
+        ],
+        "RxSwiftExt": [
+          "~> 5"
+        ],
+        "RxCocoa": [
+          "~> 5"
         ]
       }
     },
