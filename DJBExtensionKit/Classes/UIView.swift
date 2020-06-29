@@ -33,7 +33,7 @@ public extension UIView {
     func rotate(clockWise: Bool = true, duration: CFTimeInterval = 1.0) {
         self.layer.removeAnimation(forKey: "rotationAnimation")
         let rotation : CABasicAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
-        rotation.toValue = NSNumber(value: M_PI * 2 * (clockWise ? 1 : -1))
+        rotation.toValue = NSNumber(value: Double.pi * 2 * (clockWise ? 1 : -1))
         rotation.duration = duration
         rotation.isCumulative = true
         rotation.repeatCount = 0
