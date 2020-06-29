@@ -73,7 +73,8 @@ public class DJBReachability {
             return .notReachable
         }
     }
-
+    
+    #if os(iOS)
     public static var wifiSSID: String? {
         guard DJBReachability.currentReachabilityStatus == .reachableViaWiFi else { return nil }
 
@@ -85,6 +86,7 @@ public class DJBReachability {
         }
         return nil
     }
+    #endif
 
     public static var wifiEnabled: Bool {
         return DJBReachability.currentReachabilityStatus == .reachableViaWiFi
