@@ -13,3 +13,10 @@ public extension Array {
         }
     }
 }
+
+public extension Array where Element: Hashable {
+    func unique() -> Array {
+        var seen = Set<Element>()
+        return filter { seen.insert($0).inserted }
+    }
+}
