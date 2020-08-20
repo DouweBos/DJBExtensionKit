@@ -9,7 +9,7 @@ import UIKit
 
 @available(iOS 13.4, *)
 extension UIControl: UIPointerInteractionDelegate {
-    fileprivate func enablePointerInteraction() {
+    public func enablePointerInteraction() {
         self.addInteraction(UIPointerInteraction(delegate: self))
     }
 
