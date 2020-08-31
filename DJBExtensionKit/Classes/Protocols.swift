@@ -27,6 +27,7 @@ public protocol ConstrainedChildren {
 
 public extension Constrained where Self: UIView {
     @discardableResult
+    @inline(__always)
     static func constrained(
         initializer: (() -> Self)? = nil,
         _ block: (Self) throws -> Void
@@ -38,6 +39,7 @@ public extension Constrained where Self: UIView {
     }
     
     @discardableResult
+    @inline(__always)
     static func constrainedWith(
         initializer: (() -> Self)? = nil,
         parent parentView: UIView,
@@ -66,6 +68,7 @@ public extension Constrained where Self: UIView {
 extension UIView: Constrained {}
 extension UIStackView {
     @discardableResult
+    @inline(__always)
     public static func constrained(arrangedSubviews: [UIView], _ block: (UIStackView) throws -> Void) rethrows -> UIStackView {
         let instance = UIStackView(arrangedSubviews: arrangedSubviews)
         instance.translatesAutoresizingMaskIntoConstraints = false
@@ -75,6 +78,7 @@ extension UIStackView {
 }
 extension UIImageView {
     @discardableResult
+    @inline(__always)
     public static func constrained(image: UIImage?, _ block: (UIImageView) throws -> Void) rethrows -> UIImageView {
         let instance = UIImageView(image: image)
         instance.translatesAutoresizingMaskIntoConstraints = false
