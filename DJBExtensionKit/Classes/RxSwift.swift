@@ -8,6 +8,7 @@
 
 #if DJB_EXT_OFFER_RXSWIFT
 import RxSwift
+import RxCocoa
 
 public extension ObservableType {
     func currentAndPrevious() -> Observable<(current: Element, previous: Element?)> {
@@ -16,6 +17,19 @@ public extension ObservableType {
             return Observable.zip(values.asObservable(), pastValues) { (current, previous) in
                 return (current: current, previous: previous)
             }
+        }
+    }
+}
+
+extension Reactive where Base: UILabel {
+
+    /// Bindable sink for `text` property.
+    public var textForceLayout: Binder<String?> {
+        return Binder(self.base) { label, text in
+            label.text = text
+            
+            label.setNeedsLayout()
+            label.layoutIfNeeded()
         }
     }
 }
