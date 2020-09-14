@@ -62,7 +62,7 @@ public extension String {
     ///
     /// - Returns: URLENcoded `self`
     func encodeUrl() -> String {
-        return self.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? self
+        return self.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? self
     }
     
     
