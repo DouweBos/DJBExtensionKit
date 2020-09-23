@@ -9,10 +9,10 @@
 import Foundation
 import UIKit
 
-public var LOCALIZED_STRINGS_DICTIONARY: NSDictionary?
+public var LOCALIZED_STRINGS_DICTIONARY: [String: Any] = [:]
 
 public extension String {
-    static func setLocalizedStringsDictionary(with value: NSDictionary) {
+    static func setLocalizedStringsDictionary(with value: [String: Any?]) {
         LOCALIZED_STRINGS_DICTIONARY = value
     }
     
@@ -20,8 +20,8 @@ public extension String {
     ///
     /// - Parameter keyPath: key under which the localized string is stored
     /// - Returns: Localized string for key, if no localized string exists it returns the key
-    static func localizedString(for keyPath: String, from staticString: NSDictionary? = LOCALIZED_STRINGS_DICTIONARY) -> String {
-        if let s = staticString?.value(forKeyPath: "\(keyPath).value") as? String {
+    static func localizedString(for keyPath: String, from staticString: [String: Any?] = LOCALIZED_STRINGS_DICTIONARY) -> String {
+        if let s: String = try staticString[keyPath: "\(keyPath).value"] {
             return s.replacingOccurrences(of: "\\n", with: "\n")
         } else {
             return keyPath
@@ -32,9 +32,9 @@ public extension String {
     /// Returns localized string using `self` as key
     ///
     /// - Returns: Localized string for `self`, if no key exists it returns `self`
-    func localized(from staticString: NSDictionary? = LOCALIZED_STRINGS_DICTIONARY) -> String {
+    func localized(from staticString: [String: Any?] = LOCALIZED_STRINGS_DICTIONARY) -> String {
         do {
-            if let s = try staticString?.value(forKeyPath: "\(self).value") as? String {
+            if let s: String = try staticString[keyPath: "\(self).value"] {
                 return s.replacingOccurrences(of: "\\n", with: "\n")
             } else {
                 return self
