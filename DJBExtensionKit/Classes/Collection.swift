@@ -22,7 +22,6 @@ public extension Collection {
 }
 
 public extension Dictionary {
-
     subscript <T> (keyPath keyPath: String) -> T? {
         get {
             return valueForKeyPath(keyPath)
@@ -55,5 +54,16 @@ public extension Dictionary {
             return dictionary[keys[0]]
         }
         return value(Array(keys.suffix(keys.count - 1)), dictionary[keys[0]])
+    }
+}
+
+public extension Dictionary {
+    var jsonString: String? {
+        guard let theJSONData = try? JSONSerialization.data(withJSONObject: self,
+                                                            options: [.prettyPrinted]) else {
+            return nil
+        }
+
+        return String(data: theJSONData, encoding: .utf8)
     }
 }

@@ -222,14 +222,40 @@ public extension NSAttributedString {
 }
 
 public extension NSMutableAttributedString {
-    static func += (left: NSMutableAttributedString, right: String) -> NSMutableAttributedString {
+    static func += (left: NSMutableAttributedString, right: String) {
         let rightAttr = NSMutableAttributedString(string: right)
         left.append(rightAttr)
-        return left
     }
 
-    static func += (left: NSMutableAttributedString, right: NSAttributedString) -> NSMutableAttributedString {
+    static func += (left: NSMutableAttributedString, right: NSAttributedString) {
         left.append(right)
-        return left
+    }
+    
+    static func + (left: NSMutableAttributedString, right: String) -> NSMutableAttributedString {
+        let rightAttr = NSMutableAttributedString(string: right)
+        let newLeft = NSMutableAttributedString(attributedString: left)
+        newLeft.append(rightAttr)
+        return newLeft
+    }
+
+    static func + (left: NSMutableAttributedString, right: NSAttributedString) -> NSMutableAttributedString {
+        let newLeft = NSMutableAttributedString(attributedString: left)
+        newLeft.append(right)
+        return newLeft
+    }
+}
+
+public extension String {
+    var jsonObject: [String: Any?]? {
+        get {
+            if let data = data(using: .utf8) {
+                do {
+                    return try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any?]
+                } catch {
+                    print(error.localizedDescription)
+                }
+            }
+            return nil
+        }
     }
 }
