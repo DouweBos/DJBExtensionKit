@@ -81,5 +81,14 @@ public extension UIView {
         
         return superview!.convert(frame, to: self)
     }
-    
+}
+
+public extension UIView {
+    func rootLayoutIfNeeded() {
+        if let superV = superview {
+            superV.rootLayoutIfNeeded()
+        } else {
+            self.layoutIfNeeded()
+        }
+    }
 }
