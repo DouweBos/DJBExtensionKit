@@ -268,6 +268,11 @@ public enum ConstrainedAnchorRelation {
     case lessThanOrEqualTo
 }
 
+public enum ConstrainedRatioRelation {
+    case widthToHeight
+    case heightToWidth
+}
+
 // MARK: - Convenience Helper Functions
 extension Constrained where Base: UIView {
     public func margin(
@@ -318,8 +323,7 @@ extension Constrained where Base: UIView {
     
     public func center() {
         self.base.superview.also { superView in
-            self.centerX(to: superView.centerXAnchor)
-            self.centerY(to: superView.centerYAnchor)
+            self.center(to: superView)
         }
     }
     
@@ -659,36 +663,18 @@ extension Constrained where Base: UIView {
     @discardableResult
     public func ratio(
         ratio: CGFloat,
+        relation: ConstrainedRatioRelation = .widthToHeight,
         priority: UILayoutPriority? = nil,
         isActive: Bool = true
     ) -> NSLayoutConstraint {
-        return ratioWidthToHeight(ratio: ratio, priority: priority, isActive: isActive)
-    }
-    
-    @discardableResult
-    public func ratioWidthToHeight(
-        ratio: CGFloat,
-        priority: UILayoutPriority? = nil,
-        isActive: Bool = true
-    ) -> NSLayoutConstraint {
-        let constraint = self.base.widthAnchor.constraint(equalTo: self.base.heightAnchor, multiplier: ratio)
+        let constraint: NSLayoutConstraint
         
-        priority.also {
-            constraint.priority = $0
+        switch relation {
+        case .widthToHeight:
+            constraint = self.base.widthAnchor.constraint(equalTo: self.base.heightAnchor, multiplier: ratio)
+        case .heightToWidth:
+            constraint = self.base.heightAnchor.constraint(equalTo: self.base.widthAnchor, multiplier: ratio)
         }
-        
-        constraint.isActive = isActive
-        
-        return constraint
-    }
-    
-    @discardableResult
-    public func ratioHeightToWidth(
-        ratio: CGFloat,
-        priority: UILayoutPriority? = nil,
-        isActive: Bool = true
-    ) -> NSLayoutConstraint {
-        let constraint = self.base.heightAnchor.constraint(equalTo: self.base.widthAnchor, multiplier: ratio)
         
         priority.also {
             constraint.priority = $0
