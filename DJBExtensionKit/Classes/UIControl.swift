@@ -7,6 +7,8 @@
 
 import UIKit
 
+#if os(iOS)
+
 @available(iOS 13.4, *)
 extension UIControl: UIPointerInteractionDelegate {
     public func enablePointerInteraction() {
@@ -22,3 +24,5 @@ extension UIControl: UIPointerInteractionDelegate {
         return UIPointerStyle(effect: .automatic(.init(view: self)))
     }
 }
+
+#endif

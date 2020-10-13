@@ -166,7 +166,7 @@ public extension Constrainable where Self: UIView {
 extension UIView: Constrainable {}
 public extension UIStackView {
     @discardableResult
-    public static func constrained(arrangedSubviews: [UIView], _ block: (UIStackView) throws -> Void) rethrows -> UIStackView {
+    static func constrained(arrangedSubviews: [UIView], _ block: (UIStackView) throws -> Void) rethrows -> UIStackView {
         let instance = UIStackView(arrangedSubviews: arrangedSubviews)
         instance.translatesAutoresizingMaskIntoConstraints = false
         try block(instance)
@@ -175,7 +175,7 @@ public extension UIStackView {
 }
 public extension UIImageView {
     @discardableResult
-    public static func constrained(image: UIImage?, _ block: (UIImageView) throws -> Void) rethrows -> UIImageView {
+    static func constrained(image: UIImage?, _ block: (UIImageView) throws -> Void) rethrows -> UIImageView {
         let instance = UIImageView(image: image)
         instance.rx.isHidden
         
