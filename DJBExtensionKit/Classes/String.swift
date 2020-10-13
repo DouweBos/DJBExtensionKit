@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-public var LOCALIZED_STRINGS_DICTIONARY: [String: Any] = [:]
+public var LOCALIZED_STRINGS_DICTIONARY: [String: Any?] = [:]
 
 public extension String {
     static func setLocalizedStringsDictionary(with value: [String: Any?]) {
@@ -21,7 +21,7 @@ public extension String {
     /// - Parameter keyPath: key under which the localized string is stored
     /// - Returns: Localized string for key, if no localized string exists it returns the key
     static func localizedString(for keyPath: String, from staticString: [String: Any?] = LOCALIZED_STRINGS_DICTIONARY) -> String {
-        if let s: String = try staticString[keyPath: "\(keyPath).value"] {
+        if let s: String = staticString[keyPath: "\(keyPath).value"] {
             return s.replacingOccurrences(of: "\\n", with: "\n")
         } else {
             return keyPath
@@ -33,14 +33,10 @@ public extension String {
     ///
     /// - Returns: Localized string for `self`, if no key exists it returns `self`
     func localized(from staticString: [String: Any?] = LOCALIZED_STRINGS_DICTIONARY) -> String {
-        do {
-            if let s: String = try staticString[keyPath: "\(self).value"] {
-                return s.replacingOccurrences(of: "\\n", with: "\n")
-            } else {
-                return self
-            }
-        } catch let error {
-            print(error)
+        if let s: String = staticString[keyPath: "\(self).value"] {
+            return s.replacingOccurrences(of: "\\n", with: "\n")
+        } else {
+            return self
         }
     }
     

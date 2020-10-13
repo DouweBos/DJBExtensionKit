@@ -1,10 +1,10 @@
 PODS:
-  - DJBExtensionKit (0.3.2):
-    - DJBExtensionKit/Kingfisher (= 0.3.2)
-    - DJBExtensionKit/RxSwift (= 0.3.2)
-  - DJBExtensionKit/Kingfisher (0.3.2):
+  - DJBExtensionKit (0.4.1):
+    - DJBExtensionKit/Kingfisher (= 0.4.1)
+    - DJBExtensionKit/RxSwift (= 0.4.1)
+  - DJBExtensionKit/Kingfisher (0.4.1):
     - Kingfisher
-  - DJBExtensionKit/RxSwift (0.3.2):
+  - DJBExtensionKit/RxSwift (0.4.1):
     - RxCocoa (~> 5)
     - RxSwift (~> 5)
     - RxSwiftExt (~> 5)
@@ -30,12 +30,11 @@ DEPENDENCIES:
   - DJBExtensionKit (from `../`)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
-    - Kingfisher
-    - RxSwift
   trunk:
+    - Kingfisher
     - RxCocoa
     - RxRelay
+    - RxSwift
     - RxSwiftExt
 
 EXTERNAL SOURCES:
@@ -43,7 +42,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  DJBExtensionKit: 3d101df6a1fad8baee4fd6552400ff98a54ea306
+  DJBExtensionKit: dd2b3c81a19212dd8c29c026fa6532fb75957c8d
   Kingfisher: b7e4cb65ff24c264bd2a1284b75b974d907afd94
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
@@ -52,4 +51,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 09b35770df3fa80b1d8913cf1baab949d0e06084
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.9.3
