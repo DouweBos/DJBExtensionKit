@@ -386,6 +386,7 @@
 		D9549DFD5E53ED5B61748EC4ED3094D0 /* ControlProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC2BF07B9F618861381B67173E107D5 /* ControlProperty.swift */; };
 		D998806C52077DBB058D8ED327F642FC /* DispatchQueueConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20E5DAC998299F1619E6BB43B88D59E /* DispatchQueueConfiguration.swift */; };
 		D9A96B0D2538611D0017803F /* DequeueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A96B0C2538611D0017803F /* DequeueCell.swift */; };
+		D9A96BDD253888C20017803F /* Constrainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A96BDC253888C20017803F /* Constrainable.swift */; };
 		D9FA8BC38C8199840BEA7546340C78E3 /* Repeat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89434C5CCBA8862EDBC4B2C3DDD13A27 /* Repeat.swift */; };
 		DA2A0CBBF0A498E6202CECCB36546643 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBFC3679C80022913F03AF1A1137EF7C /* Foundation.framework */; };
 		DA5AC02DF4F69AFFC17E3DD0C44C5388 /* Deprecated.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2A75EC05F9965B7E6D0B005D1EC776 /* Deprecated.swift */; };
@@ -935,6 +936,7 @@
 		D95B6BC9733861AB07D96513DB01DA84 /* Deprecated.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Deprecated.swift; path = RxCocoa/Deprecated.swift; sourceTree = "<group>"; };
 		D99DD7E280A82838E88E71439A0645C3 /* Window.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Window.swift; path = RxSwift/Observables/Window.swift; sourceTree = "<group>"; };
 		D9A96B0C2538611D0017803F /* DequeueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DequeueCell.swift; path = DJBExtensionKit/Classes/DequeueCell.swift; sourceTree = "<group>"; };
+		D9A96BDC253888C20017803F /* Constrainable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Constrainable.swift; path = DJBExtensionKit/Classes/Constrainable.swift; sourceTree = "<group>"; };
 		D9EEE5DFBD095FDE7C32F04EE655961E /* SchedulerType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SchedulerType.swift; path = RxSwift/SchedulerType.swift; sourceTree = "<group>"; };
 		D9FC87510DF5D52C98E524FA0A113E03 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Sources/Utility/Result.swift; sourceTree = "<group>"; };
 		DB0DBB4ACCA781A9E30B582F63205CC8 /* Pods-DJBExtensionKit_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DJBExtensionKit_Tests-dummy.m"; sourceTree = "<group>"; };
@@ -1532,6 +1534,7 @@
 				666ED07524B0B335228BF8358C3BE374 /* Bundle.swift */,
 				DFCA9A572F6F5F9F379169F45CB94A66 /* Collection.swift */,
 				D9A96B0C2538611D0017803F /* DequeueCell.swift */,
+				D9A96BDC253888C20017803F /* Constrainable.swift */,
 				E09B5183E58518C71A9B0DE974667662 /* Date.swift */,
 				E94D2F8638105BEEAF623C72BC363B5C /* Double.swift */,
 				125B48541D671F4DF6097F2023DD6BD8 /* Infix.swift */,
@@ -2069,6 +2072,7 @@
 				7E16F32C721C290C49031D9F62044661 /* NSTextAttachment.swift in Sources */,
 				F3D696E708EA42E46CF53B012C894078 /* Optional.swift in Sources */,
 				A03F3E4C8E83BFBBCB7C62CDD79C717E /* Reachability.swift in Sources */,
+				D9A96BDD253888C20017803F /* Constrainable.swift in Sources */,
 				C36205812CBA97EFCB6DBA87044844D4 /* RxSwift.swift in Sources */,
 				F15477B3D00F500DC71A300B27F85626 /* String.swift in Sources */,
 				C7E13BC8EA3A5D357AB4C01C4A3202C7 /* UIButton.swift in Sources */,
