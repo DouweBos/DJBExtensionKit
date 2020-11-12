@@ -39,17 +39,23 @@ extension UIViewController {
     
     /// Returns the current application's top most view controller.
     open class var topMost: UIViewController? {
-        var rootViewController: UIViewController?
-        let currentWindows = UIApplication.shared.windows
-        
-        for window in currentWindows {
-            if let windowRootViewController = window.rootViewController {
-                rootViewController = windowRootViewController
-                break
+        if let delegate = UIApplication.shared.delegate,
+           let window = delegate.window,
+           let root = window?.rootViewController {
+            return self.topMost(of: root)
+        } else {
+            let currentWindows = UIApplication.shared.windows
+            var rootViewController: UIViewController? = nil
+            
+            for window in currentWindows {
+                if let windowRootViewController = window.rootViewController {
+                    rootViewController = windowRootViewController
+                    break
+                }
             }
+            
+            return self.topMost(of: rootViewController)
         }
-        
-        return self.topMost(of: rootViewController)
     }
     
     /// Returns the top most view controller from given view controller's stack.
