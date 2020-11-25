@@ -42,8 +42,7 @@ Just a collection of extensions I like to use. This is just so I no longer have 
   # s.frameworks = 'UIKit', 'MapKit'
 
   s.subspec 'RxSwift' do |rxswift|
-    rxswift.xcconfig =
-    { 'OTHER_SWIFT_FLAGS' => '$(inherited) -DDJB_EXT_OFFER_RXSWIFT' }
+    rxswift.xcconfig = { 'OTHER_SWIFT_FLAGS' => '$(inherited) -DDJB_EXT_OFFER_RXSWIFT' }
     rxswift.dependency 'RxSwift', '~> 5'
     rxswift.dependency 'RxSwift', '~> 5'
     rxswift.dependency 'RxSwiftExt', '~> 5'
@@ -51,8 +50,7 @@ Just a collection of extensions I like to use. This is just so I no longer have 
   end
   
   s.subspec 'Kingfisher' do |kingfisher|
-    kingfisher.xcconfig  =
-    { 'OTHER_SWIFT_FLAGS' => '$(inherited) -DDJB_EXT_OFFER_KINGFISHER' }
+    kingfisher.xcconfig  = { 'OTHER_SWIFT_FLAGS' => '$(inherited) -DDJB_EXT_OFFER_KINGFISHER' }
     kingfisher.dependency 'Kingfisher'
   end
 end
