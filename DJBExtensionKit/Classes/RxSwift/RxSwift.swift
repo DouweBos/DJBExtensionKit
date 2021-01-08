@@ -6,7 +6,6 @@
 //  Copyright © 2019 DJBSoftware. All rights reserved.
 //
 
-#if DJB_EXT_OFFER_RXSWIFT
 import RxSwift
 import RxCocoa
 
@@ -33,4 +32,3 @@ extension Reactive where Base: UILabel {
         }
     }
 }
-#endif

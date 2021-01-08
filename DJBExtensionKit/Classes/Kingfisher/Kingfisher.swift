@@ -6,7 +6,6 @@
 //  Copyright © 2019 DJBSoftware. All rights reserved.
 //
 
-#if DJB_EXT_OFFER_KINGFISHER
 import Kingfisher
 
 public extension KingfisherWrapper where Base: KFCrossPlatformImageView {
@@ -130,5 +129,3 @@ public extension KingfisherManager {
         }
     }
 }
-
-#endif

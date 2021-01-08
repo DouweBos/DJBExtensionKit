@@ -3,6 +3,7 @@
 //  DJBExtensionKit
 //
 //  Created by Douwe Bos on 10/12/2019.
+//  Copyright © 2019 DJBSoftware. All rights reserved.
 //
 
 import UIKit
