@@ -11,46 +11,39 @@ Pod::Spec.new do |s|
   s.version          = '0.4.5'
   s.summary          = 'Collection of personal extension I like to use.'
 
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
   s.description      = <<-DESC
 Just a collection of extensions I like to use. This is just so I no longer have to copy everything over from project to project. Please do not actually use me.
                        DESC
 
   s.homepage         = 'https://github.com/DouweBos/DJBExtensionKit'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'DouweBos' => 'douwe@douwebos.nl' }
   s.source           = { :git => 'https://github.com/DouweBos/DJBExtensionKit.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
+  s.platform     = :ios, :tvos
   s.ios.deployment_target = '10.0'
   s.tvos.deployment_target = '10.0'
 
-  s.source_files = 'DJBExtensionKit/Classes/**/*'
   s.swift_version = '5.1'
-  
-  # s.resource_bundles = {
-  #   'DJBExtensionKit' => ['DJBExtensionKit/Assets/*.png']
-  # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
+  s.default_subspec = 'Core'
 
-  s.subspec 'RxSwift' do |rxswift|
-    rxswift.xcconfig = { 'OTHER_SWIFT_FLAGS' => '$(inherited) -DDJB_EXT_OFFER_RXSWIFT' }
-    rxswift.dependency 'RxSwift', '~> 5'
-    rxswift.dependency 'RxSwift', '~> 5'
-    rxswift.dependency 'RxSwiftExt', '~> 5'
-    rxswift.dependency 'RxCocoa', '~> 5'
+  s.subspec 'Core' do |ss|
+    ss.source_files = 'DJBExtensionKit/Classes/Core/**/*'
+  end
+
+  s.subspec 'RxSwift' do |ss|
+    ss.source_files = 'DJBExtensionKit/Classes/RxSwift/**/*'
+
+    ss.dependency 'RxSwift', '~> 5'
+    ss.dependency 'RxSwift', '~> 5'
+    ss.dependency 'RxSwiftExt', '~> 5'
+    ss.dependency 'RxCocoa', '~> 5'
   end
   
-  s.subspec 'Kingfisher' do |kingfisher|
-    kingfisher.xcconfig  = { 'OTHER_SWIFT_FLAGS' => '$(inherited) -DDJB_EXT_OFFER_KINGFISHER' }
-    kingfisher.dependency 'Kingfisher'
+  s.subspec 'Kingfisher' do |ss|
+    ss.source_files = 'DJBExtensionKit/Classes/Kingfisher/**/*'
+    
+    ss.dependency 'Kingfisher'
   end
 end

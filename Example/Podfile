@@ -1,6 +1,6 @@
 use_frameworks!
 target 'DJBExtensionKit_Tests' do
-  pod 'DJBExtensionKit', :path => '../'
-  
-  
+  pod 'DJBExtensionKit/Core', :path => '../'
+  pod 'DJBExtensionKit/RxSwift', :path => '../'
+  pod 'DJBExtensionKit/Kingfisher', :path => '../'
 end

@@ -1,22 +1,18 @@
 PODS:
-  - DJBExtensionKit (0.4.1):
-    - DJBExtensionKit/Kingfisher (= 0.4.1)
-    - DJBExtensionKit/RxSwift (= 0.4.1)
-  - DJBExtensionKit/Kingfisher (0.4.1):
+  - DJBExtensionKit/Core (0.4.5)
+  - DJBExtensionKit/Kingfisher (0.4.5):
     - Kingfisher
-  - DJBExtensionKit/RxSwift (0.4.1):
+  - DJBExtensionKit/RxSwift (0.4.5):
     - RxCocoa (~> 5)
     - RxSwift (~> 5)
     - RxSwiftExt (~> 5)
-  - Kingfisher (5.8.3):
-    - Kingfisher/Core (= 5.8.3)
-  - Kingfisher/Core (5.8.3)
+  - Kingfisher (6.0.1)
   - RxCocoa (5.1.1):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
   - RxRelay (5.1.1):
     - RxSwift (~> 5)
-  - RxSwift (5.0.0)
+  - RxSwift (5.1.1)
   - RxSwiftExt (5.2.0):
     - RxSwiftExt/Core (= 5.2.0)
     - RxSwiftExt/RxCocoa (= 5.2.0)
@@ -27,7 +23,9 @@ PODS:
     - RxSwiftExt/Core
 
 DEPENDENCIES:
-  - DJBExtensionKit (from `../`)
+  - DJBExtensionKit/Core (from `../`)
+  - DJBExtensionKit/Kingfisher (from `../`)
+  - DJBExtensionKit/RxSwift (from `../`)
 
 SPEC REPOS:
   trunk:
@@ -42,13 +40,13 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  DJBExtensionKit: dd2b3c81a19212dd8c29c026fa6532fb75957c8d
-  Kingfisher: b7e4cb65ff24c264bd2a1284b75b974d907afd94
+  DJBExtensionKit: 9feb8c8f8f4140712d4767bdec00b8d6cbd02718
+  Kingfisher: adde87a4f74f6a3845395769354efff593581740
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
-  RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
+  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   RxSwiftExt: 4ca80336f43c28f11a2825cdd2fc61dd6c044697
 
-PODFILE CHECKSUM: 09b35770df3fa80b1d8913cf1baab949d0e06084
+PODFILE CHECKSUM: a53623d18526b7a23c6a4009bd1454cdc3115614
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.10.1

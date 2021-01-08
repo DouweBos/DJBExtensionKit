@@ -1,6 +1,6 @@
 {
   "name": "DJBExtensionKit",
-  "version": "0.4.1",
+  "version": "0.4.5",
   "summary": "Collection of personal extension I like to use.",
   "description": "Just a collection of extensions I like to use. This is just so I no longer have to copy everything over from project to project. Please do not actually use me.",
   "homepage": "https://github.com/DouweBos/DJBExtensionKit",
@@ -13,20 +13,22 @@
   },
   "source": {
     "git": "https://github.com/DouweBos/DJBExtensionKit.git",
-    "tag": "0.4.1"
+    "tag": "0.4.5"
   },
   "platforms": {
     "ios": "10.0",
     "tvos": "10.0"
   },
-  "source_files": "DJBExtensionKit/Classes/**/*",
   "swift_versions": "5.1",
+  "default_subspecs": "Core",
   "subspecs": [
     {
+      "name": "Core",
+      "source_files": "DJBExtensionKit/Classes/Core/**/*"
+    },
+    {
       "name": "RxSwift",
-      "xcconfig": {
-        "OTHER_SWIFT_FLAGS": "$(inherited) -DDJB_EXT_OFFER_RXSWIFT"
-      },
+      "source_files": "DJBExtensionKit/Classes/RxSwift/**/*",
       "dependencies": {
         "RxSwift": [
           "~> 5"
@@ -41,9 +43,7 @@
     },
     {
       "name": "Kingfisher",
-      "xcconfig": {
-        "OTHER_SWIFT_FLAGS": "$(inherited) -DDJB_EXT_OFFER_KINGFISHER"
-      },
+      "source_files": "DJBExtensionKit/Classes/Kingfisher/**/*",
       "dependencies": {
         "Kingfisher": [
 
