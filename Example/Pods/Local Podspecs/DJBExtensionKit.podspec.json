@@ -15,6 +15,7 @@
     "git": "https://github.com/DouweBos/DJBExtensionKit.git",
     "tag": "0.4.5"
   },
+  "social_media_url": "https://twitter.com/douwebos_nl",
   "platforms": {
     "ios": "10.0",
     "tvos": "10.0"
@@ -30,6 +31,9 @@
       "name": "RxSwift",
       "source_files": "DJBExtensionKit/Classes/RxSwift/**/*",
       "dependencies": {
+        "DJBExtensionKit/Core": [
+          "~> 0.4.5"
+        ],
         "RxSwift": [
           "~> 5"
         ],
@@ -45,6 +49,9 @@
       "name": "Kingfisher",
       "source_files": "DJBExtensionKit/Classes/Kingfisher/**/*",
       "dependencies": {
+        "DJBExtensionKit/Core": [
+          "~> 0.4.5"
+        ],
         "Kingfisher": [
           "~> 5"
         ]
@@ -57,6 +64,9 @@
         "ios": "11.0"
       },
       "dependencies": {
+        "DJBExtensionKit/Core": [
+          "~> 0.4.5"
+        ],
         "Nuke": [
           "~> 9"
         ],

@@ -72,7 +72,7 @@ platform :ios do
 
   desc "Validate DJBExtensionKit pod spec"
   lane :validate do
-    sh('bundle exec pod spec lint ../DJBExtensionKit.podspec --sources="https://github.com/DouweBos/DJB-Pod-Specs","https://cdn.cocoapods.org/" --allow-warnings')
+    sh('bundle exec pod lib lint ../DJBExtensionKit.podspec --sources="https://github.com/DouweBos/DJB-Pod-Specs","https://cdn.cocoapods.org/" --allow-warnings')
   end
 
   before_each do |lane, options|
