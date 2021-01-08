@@ -3,4 +3,5 @@ target 'DJBExtensionKit_Tests' do
   pod 'DJBExtensionKit/Core', :path => '../'
   pod 'DJBExtensionKit/RxSwift', :path => '../'
   pod 'DJBExtensionKit/Kingfisher', :path => '../'
+  pod 'DJBExtensionKit/Nuke', :path => '../'
 end

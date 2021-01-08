@@ -46,7 +46,22 @@
       "source_files": "DJBExtensionKit/Classes/Kingfisher/**/*",
       "dependencies": {
         "Kingfisher": [
-
+          "~> 5"
+        ]
+      }
+    },
+    {
+      "name": "Nuke",
+      "source_files": "DJBExtensionKit/Classes/Nuke/**/*",
+      "platforms": {
+        "ios": "11.0"
+      },
+      "dependencies": {
+        "Nuke": [
+          "~> 9"
+        ],
+        "RxNuke": [
+          "~> 1"
         ]
       }
     }
