@@ -29,11 +29,11 @@ Just a collection of extensions I like to use. This is just so I no longer have 
   s.default_subspec = 'Core'
 
   s.subspec 'Core' do |ss|
-    ss.source_files = 'DJBExtensionKit/Classes/Core/**/*'
+    ss.source_files = 'DJBExtensionKit/Classes/Core/*'
   end
 
   s.subspec 'RxSwift' do |ss|
-    ss.source_files = 'DJBExtensionKit/Classes/RxSwift/**/*'
+    ss.source_files = 'DJBExtensionKit/Classes/RxSwift/*'
 
     ss.dependency 'RxSwift', '~> 5'
     ss.dependency 'RxSwift', '~> 5'
@@ -42,13 +42,13 @@ Just a collection of extensions I like to use. This is just so I no longer have 
   end
   
   s.subspec 'Kingfisher' do |ss|
-    ss.source_files = 'DJBExtensionKit/Classes/Kingfisher/**/*'
+    ss.source_files = 'DJBExtensionKit/Classes/Kingfisher/*'
     
     ss.dependency 'Kingfisher', '~> 5'
   end
 
   s.subspec 'Nuke' do |ss|
-    ss.source_files = 'DJBExtensionKit/Classes/Nuke/**/*'
+    ss.source_files = 'DJBExtensionKit/Classes/Nuke/*'
 
     ss.ios.deployment_target = '11.0'
     
