@@ -13,6 +13,7 @@ public extension KingfisherWrapper where Base: KFCrossPlatformImageView {
                   placeholder: UIImage? = nil,
                   options: KingfisherOptionsInfo? = nil,
                   progressBlock: DownloadProgressBlock? = nil,
+                  faceAware: Bool = false,
                   imageFailCheck: @escaping (() -> Bool) = { return true },
                   completionHandler: ((Result<RetrieveImageResult, KingfisherError>) -> Void)? = nil) {
 
@@ -33,7 +34,11 @@ public extension KingfisherWrapper where Base: KFCrossPlatformImageView {
                                                         case .success(let imageResult):
                                                             DispatchQueue.main.async {
                                                                 if imageFailCheck() {
-                                                                    self.base.image = imageResult.image
+                                                                    if faceAware {
+                                                                        self.base.set(image: imageResult.image, focusOnFaces: true)
+                                                                    } else {
+                                                                        self.base.image = imageResult.image
+                                                                    }
                                                                     
                                                                     completionHandler?(result)
                                                                 } else {
@@ -54,6 +59,7 @@ public extension KingfisherWrapper where Base: KFCrossPlatformImageView {
                   placeholder: UIImage? = nil,
                   options: KingfisherOptionsInfo? = nil,
                   progressBlock: DownloadProgressBlock? = nil,
+                  faceAware: Bool = false,
                   imageFailCheck: @escaping (() -> Bool) = { return true },
                   completionHandler: ((Result<RetrieveImageResult, KingfisherError>) -> Void)? = nil) {
 
@@ -75,7 +81,11 @@ public extension KingfisherWrapper where Base: KFCrossPlatformImageView {
                                                             case .success(let imageResult):
                                                                 DispatchQueue.main.async {
                                                                     if imageFailCheck() {
-                                                                        self.base.image = imageResult.image
+                                                                        if faceAware {
+                                                                            self.base.set(image: imageResult.image, focusOnFaces: true)
+                                                                        } else {
+                                                                            self.base.image = imageResult.image
+                                                                        }
                                                                         
                                                                         completionHandler?(result)
                                                                     } else {

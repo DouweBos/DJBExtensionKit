@@ -37,7 +37,7 @@ extension UIImageView {
     }
 
     @IBInspectable
-    var focusOnFaces: Bool {
+    public var focusOnFaces: Bool {
         set {
             let image = self.image
             self.image = nil
@@ -46,7 +46,7 @@ extension UIImageView {
             return sublayer() != nil ? true : false
         }
     }
-
+    
     func set(image: UIImage?, focusOnFaces: Bool) {
         guard focusOnFaces == true else {
             self.removeImageLayer(image: image)
