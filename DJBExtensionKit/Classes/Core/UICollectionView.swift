@@ -22,11 +22,11 @@ public extension UICollectionView {
     /// - Parameters:
     ///   - numberOfGridsPerRow: Number of columns in each row of cells
     ///   - space: Padding between cells and edge inset of entire UICollectionView
-    func adaptGrid(numberOfGridsPerRow: Int, gridLineSpace space: CGFloat, cellHeightRatio: CGFloat? = nil) {
+    func adaptGrid(numberOfGridsPerRow: Int, gridLineSpace space: CGFloat, cellHeightRatio: CGFloat? = nil, padding: UIEdgeInsets? = nil) {
         let inset = UIEdgeInsets(
             top: space, left: space, bottom: space, right: space
         )
-        adaptGrid(numberOfGridsPerRow: numberOfGridsPerRow, gridLineSpace: space, sectionInset: inset, cellHeightRatio: cellHeightRatio)
+        adaptGrid(numberOfGridsPerRow: numberOfGridsPerRow, gridLineSpace: space, sectionInset: inset, cellHeightRatio: cellHeightRatio, padding: padding)
     }
     
     
@@ -36,7 +36,7 @@ public extension UICollectionView {
     ///   - numberOfGridsPerRow: Number of columns in each row of cells
     ///   - space: Padding between cells
     ///   - inset: Edge insets of UICollecionView
-    func adaptGrid(numberOfGridsPerRow: Int, gridLineSpace space: CGFloat, sectionInset inset: UIEdgeInsets, cellHeightRatio: CGFloat? = nil) {
+    func adaptGrid(numberOfGridsPerRow: Int, gridLineSpace space: CGFloat, sectionInset inset: UIEdgeInsets, cellHeightRatio: CGFloat? = nil, padding: UIEdgeInsets? = nil) {
         guard let layout = collectionViewLayout as? UICollectionViewFlowLayout else {
             return
         }
@@ -51,7 +51,15 @@ public extension UICollectionView {
         guard side > 0.0 else {
             return
         }
-        layout.itemSize = CGSize(width: side, height: side * (cellHeightRatio ?? (188.0/104.0)))
+        let heightPadding = padding.map { padding in
+            padding.top + padding.bottom
+        } ?? 0.0
+        
+        let widthPadding = padding.map { padding in
+            padding.left + padding.right
+        } ?? 0.0
+        
+        layout.itemSize = CGSize(width: side + widthPadding, height: side * (cellHeightRatio ?? (188.0/104.0)) + heightPadding)
         layout.minimumLineSpacing = space
         layout.minimumInteritemSpacing = space
         layout.sectionInset = inset
