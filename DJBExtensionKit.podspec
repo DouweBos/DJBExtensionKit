@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DJBExtensionKit'
-  s.version          = '0.4.9'
+  s.version          = '0.4.10'
   s.summary          = 'Collection of personal extension I like to use.'
 
   s.description      = <<-DESC
