@@ -1,14 +1,14 @@
 PODS:
-  - DJBExtensionKit/Core (0.4.5)
-  - DJBExtensionKit/Kingfisher (0.4.5):
-    - DJBExtensionKit/Core (~> 0.4.5)
+  - DJBExtensionKit/Core (0.4.7)
+  - DJBExtensionKit/Kingfisher (0.4.7):
+    - DJBExtensionKit/Core (~> 0.4.7)
     - Kingfisher (~> 5)
-  - DJBExtensionKit/Nuke (0.4.5):
-    - DJBExtensionKit/Core (~> 0.4.5)
+  - DJBExtensionKit/Nuke (0.4.7):
+    - DJBExtensionKit/Core (~> 0.4.7)
     - Nuke (~> 9)
     - RxNuke (~> 1)
-  - DJBExtensionKit/RxSwift (0.4.5):
-    - DJBExtensionKit/Core (~> 0.4.5)
+  - DJBExtensionKit/RxSwift (0.4.7):
+    - DJBExtensionKit/Core (~> 0.4.7)
     - RxCocoa (~> 5)
     - RxSwift (~> 5)
     - RxSwiftExt (~> 5)
@@ -55,7 +55,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  DJBExtensionKit: 156389473ce8175c27f77660ab7d791182cc13a4
+  DJBExtensionKit: a4f4d536d6b155f1f5065d65263b1ecf528cba3a
   Kingfisher: a3c03d702433fa6cfedabb2bddbe076fb8f2e902
   Nuke: 3dd19fd03612c179036d2af7f56ec57cb84144e2
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
