@@ -185,6 +185,20 @@ public extension String {
                           range: nil,
                           locale: nil) != nil
     }
+    
+    func matchGroups(pattern: String) -> [(match: String, groups: [String])] {
+        let nsString = self as NSString
+        return (try? NSRegularExpression(pattern: pattern,
+                                         options: [])
+        )?.matches(in: self,
+                   options: [],
+                   range: NSMakeRange(0, count)
+        ).map { match in
+            (match: match.range(at: 0).location == NSNotFound ? "" : nsString.substring(with: match.range(at:0)),
+             groups: (1..<match.numberOfRanges).map { match.range(at: $0).location == NSNotFound ? "" : nsString.substring(with: match.range(at: $0)) }
+             )
+        } ?? []
+    }
 }
 
 public extension String {
