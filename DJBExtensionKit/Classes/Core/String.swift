@@ -159,9 +159,7 @@ public extension StringProtocol {
     }
 }
 
-struct Regex {
-    private init() {}
-
+enum Regex {
     static let ipAddress = "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"
     static let hostname = "^(([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9\\-]*[a-zA-Z0-9])\\.)*([A-Za-z0-9]|[A-Za-z0-9][A-Za-z0-9\\-]*[A-Za-z0-9])$"
     
@@ -181,7 +179,7 @@ public extension String {
         return self.matches(pattern: Regex.email)
     }
 
-    private func matches(pattern: String) -> Bool {
+    func matches(pattern: String) -> Bool {
         return self.range(of: pattern,
                           options: .regularExpression,
                           range: nil,
