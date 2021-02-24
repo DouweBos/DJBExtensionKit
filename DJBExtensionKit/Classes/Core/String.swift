@@ -267,3 +267,18 @@ public extension String {
         }
     }
 }
+
+
+public extension String {
+    // Since Swift randomly seeds the hashvalue, this extension adds an option to hash strings with consistent values across app sessions
+    var consistentHash: Int {
+        get {
+            var result = UInt64 (5381)
+            let buf = [UInt8](utf8)
+            for b in buf {
+                result = 127 * (result & 0x00ffffffffffffff) + UInt64(b)
+            }
+            return Int(result)
+        }
+    }
+}
