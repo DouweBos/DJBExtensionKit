@@ -9,8 +9,8 @@ import Foundation
 
 public extension CGPoint {
     static func pointOnCircle(center: CGPoint, radius: CGFloat, angle: CGFloat) -> CGPoint {
-        let x = center.x + radius * cos(angle)
-        let y = center.y + radius * sin(angle)
+        let x = center.x + radius * cos(angle.radians)
+        let y = center.y + radius * sin(angle.radians)
         
         return CGPoint(x: x, y: y)
     }
