@@ -1,6 +1,6 @@
 {
   "name": "DJBExtensionKit",
-  "version": "0.4.10",
+  "version": "0.4.11",
   "summary": "Collection of personal extension I like to use.",
   "description": "Just a collection of extensions I like to use. This is just so I no longer have to copy everything over from project to project. Please do not actually use me.",
   "homepage": "https://github.com/DouweBos/DJBExtensionKit",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/DouweBos/DJBExtensionKit.git",
-    "tag": "0.4.10"
+    "tag": "0.4.11"
   },
   "social_media_url": "https://twitter.com/douwebos_nl",
   "platforms": {
@@ -32,7 +32,7 @@
       "source_files": "DJBExtensionKit/Classes/RxSwift/**/*",
       "dependencies": {
         "DJBExtensionKit/Core": [
-          "~> 0.4.10"
+          "~> 0.4.11"
         ],
         "RxSwift": [
           "~> 5"
@@ -50,7 +50,7 @@
       "source_files": "DJBExtensionKit/Classes/Kingfisher/**/*",
       "dependencies": {
         "DJBExtensionKit/Core": [
-          "~> 0.4.10"
+          "~> 0.4.11"
         ],
         "Kingfisher": [
           "~> 5"
@@ -65,7 +65,7 @@
       },
       "dependencies": {
         "DJBExtensionKit/Core": [
-          "~> 0.4.10"
+          "~> 0.4.11"
         ],
         "Nuke": [
           "~> 9"
