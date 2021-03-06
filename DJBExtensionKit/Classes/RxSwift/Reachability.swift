@@ -75,6 +75,7 @@ public class DJBReachability {
     }
     
     #if os(iOS)
+    @available(macCatalyst 14.0, *)
     public static var wifiSSID: String? {
         guard DJBReachability.currentReachabilityStatus == .reachableViaWiFi else { return nil }
 
