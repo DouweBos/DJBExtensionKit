@@ -38,10 +38,10 @@ Just a collection of extensions I like to use. This is just so I no longer have 
 
     ss.dependency 'DJBExtensionKit/Core', "~> #{s.version}"
 
-    ss.dependency 'RxSwift', '~> 5'
-    ss.dependency 'RxSwift', '~> 5'
-    ss.dependency 'RxSwiftExt', '~> 5'
-    ss.dependency 'RxCocoa', '~> 5'
+    ss.dependency 'RxSwift', '~> 6'
+    ss.dependency 'RxSwift', '~> 6'
+    ss.dependency 'RxSwiftExt', '~> 6'
+    ss.dependency 'RxCocoa', '~> 6'
   end
   
   s.subspec 'Kingfisher' do |ss|
