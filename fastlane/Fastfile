@@ -128,6 +128,26 @@ platform :ios do
     commit_docs()
   end
 
+  before_each do |lane, options|
+    # send slack failure notification
+    slack(
+        message: "DJBExtensionKit - Lane: *#{lane}* started",
+        slack_url: ENV["DOUWE_BOS_SLACK_COCOAPODS"].to_s,
+        success: true,
+        default_payloads: [:git_branch, :last_git_commit_message]
+    )
+  end
+
+  after_each do |lane, options|
+    # send slack failure notification
+    slack(
+        message: "DJBExtensionKit - Lane: *#{lane}* finished",
+        slack_url: ENV["DOUWE_BOS_SLACK_COCOAPODS"].to_s,
+        success: true,
+        default_payloads: [:git_branch, :last_git_commit_message]
+    )
+  end
+
   # handle exception
   error do |lane, exception, options|
     # send slack failure notification
