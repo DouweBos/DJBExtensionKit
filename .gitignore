@@ -68,3 +68,10 @@ fastlane/screenshots
 fastlane/test_output
 
 fastlane/config.json
+
+# Bundler
+.bundle
+
+# Bundler running on CI
+vendor/
+
