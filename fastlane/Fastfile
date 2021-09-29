@@ -133,7 +133,7 @@ platform :ios do
     # send slack failure notification
     slack(
         message: "DJBExtensionKit - Lane: *#{lane}* failed with exception: #{exception}",
-        slack_url: ENV["DOUWE_BOS_SLACK_COCOAPODS"].to_s,
+        slack_url: ENV["DB_SLACK_COCOAPODS_WEBHOOK"].to_s,
         success: false,
         default_payloads: [:git_branch, :last_git_commit_message]
     )
