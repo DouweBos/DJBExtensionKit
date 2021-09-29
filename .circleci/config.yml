@@ -10,7 +10,7 @@ commands:
       - run:
           name: Install Bundler
           command: |
-            gem install bundler
+            gem install bundler -v 2.2.28
       - run:
           name: Setup Bundler
           command: bundle config set --local deployment 'true'

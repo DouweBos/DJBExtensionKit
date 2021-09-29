@@ -1,5 +1,5 @@
 current directory: /Users/douwe/Werk/Reelgood/Projects/DJBExtensionKit/vendor/bundle/ruby/2.7.0/gems/unf_ext-0.0.8/ext/unf_ext
-/Users/douwe/.rvm/rubies/ruby-2.7.2/bin/ruby -I /Users/douwe/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0 -r ./siteconf20210929-30126-1q7062b.rb extconf.rb
+/Users/douwe/.rvm/rubies/ruby-2.7.2/bin/ruby -I /Users/douwe/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0 -r ./siteconf20210929-40057-1ksos9b.rb extconf.rb
 checking for -lstdc++... yes
 creating Makefile
 
@@ -134,4 +134,4 @@ linking shared-object unf_ext.bundle
 
 current directory: /Users/douwe/Werk/Reelgood/Projects/DJBExtensionKit/vendor/bundle/ruby/2.7.0/gems/unf_ext-0.0.8/ext/unf_ext
 make "DESTDIR=" install
-/usr/local/opt/coreutils/bin/ginstall -c -m 0755 unf_ext.bundle ./.gem.20210929-30126-75vgaq
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 unf_ext.bundle ./.gem.20210929-40057-e7rdvh

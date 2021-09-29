@@ -1,5 +1,5 @@
 current directory: /Users/douwe/Werk/Reelgood/Projects/DJBExtensionKit/vendor/bundle/ruby/2.7.0/gems/ffi-1.15.4/ext/ffi_c
-/Users/douwe/.rvm/rubies/ruby-2.7.2/bin/ruby -I /Users/douwe/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0 -r ./siteconf20210929-30126-1jd1zy4.rb extconf.rb
+/Users/douwe/.rvm/rubies/ruby-2.7.2/bin/ruby -I /Users/douwe/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0 -r ./siteconf20210929-40057-hsd4n2.rb extconf.rb
 checking for ffi_prep_closure_loc() in -lffi... no
 checking for ffi_prep_closure_loc() in -llibffi... no
 checking for ffi_prep_closure_loc() in -llibffi-8... no
@@ -8218,4 +8218,4 @@ Variadic.c:218:58: note: ')' token is here
 20 warnings generated.
 compiling ffi.c
 linking shared-object ffi_c.bundle
-/usr/local/opt/coreutils/bin/ginstall -c -m 0755 ffi_c.bundle ./.gem.20210929-30126-191bdsc
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 ffi_c.bundle ./.gem.20210929-40057-tptsy1
