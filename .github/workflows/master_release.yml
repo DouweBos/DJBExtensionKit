@@ -1,4 +1,4 @@
-name: DJBEXTENSIONKIT
+name: DJBExtensionKit Release
 
 on:
   push:
