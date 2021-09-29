@@ -129,20 +129,20 @@ platform :ios do
   end
 
   before_each do |lane, options|
-    # send slack failure notification
+    # send slack start notification
     slack(
         message: "DJBExtensionKit - Lane: *#{lane}* started",
-        slack_url: ENV["DOUWE_BOS_SLACK_COCOAPODS"].to_s,
+        slack_url: ENV["DB_SLACK_COCOAPODS_WEBHOOK"].to_s,
         success: true,
         default_payloads: [:git_branch, :last_git_commit_message]
     )
   end
 
   after_each do |lane, options|
-    # send slack failure notification
+    # send slack finish notification
     slack(
         message: "DJBExtensionKit - Lane: *#{lane}* finished",
-        slack_url: ENV["DOUWE_BOS_SLACK_COCOAPODS"].to_s,
+        slack_url: ENV["DB_SLACK_COCOAPODS_WEBHOOK"].to_s,
         success: true,
         default_payloads: [:git_branch, :last_git_commit_message]
     )
