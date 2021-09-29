@@ -1,0 +1,13 @@
+current directory: /Users/douwe/Werk/Reelgood/Projects/DJBExtensionKit/vendor/bundle/ruby/2.7.0/gems/json-2.5.1/ext/json
+/Users/douwe/.rvm/rubies/ruby-2.7.2/bin/ruby -I /Users/douwe/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0 -r ./siteconf20210929-30126-nwa1r7.rb extconf.rb
+creating Makefile
+
+current directory: /Users/douwe/Werk/Reelgood/Projects/DJBExtensionKit/vendor/bundle/ruby/2.7.0/gems/json-2.5.1/ext/json
+make "DESTDIR=" clean
+
+current directory: /Users/douwe/Werk/Reelgood/Projects/DJBExtensionKit/vendor/bundle/ruby/2.7.0/gems/json-2.5.1/ext/json
+make "DESTDIR="
+make: Nothing to be done for `all'.
+
+current directory: /Users/douwe/Werk/Reelgood/Projects/DJBExtensionKit/vendor/bundle/ruby/2.7.0/gems/json-2.5.1/ext/json
+make "DESTDIR=" install
