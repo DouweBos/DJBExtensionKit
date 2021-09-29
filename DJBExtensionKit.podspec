@@ -50,6 +50,7 @@ Just a collection of extensions I like to use. This is just so I no longer have 
     ss.dependency 'DJBExtensionKit/Core', "~> #{s.version}"
 
     ss.dependency 'Kingfisher', '~> 5'
+    ss.dependency 'RxKingfisher'
   end
 
   s.subspec 'Nuke' do |ss|
