@@ -9,12 +9,6 @@
 import UIKit
 
 public extension UICollectionView {
-    func register<T: UICollectionViewCell>(cell: T.Type) {
-        register(cell.nib, forCellWithReuseIdentifier: cell.reuseIdentifier)
-    }
-}
-
-public extension UICollectionView {
     
     
     /// Apply Grid layout to UICollectionView
