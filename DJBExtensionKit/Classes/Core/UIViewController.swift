@@ -8,15 +8,6 @@
 
 import UIKit
 
-
-public extension UIViewController {
-    
-    /// Get ClassName for UIViewController
-    var className: String {
-        return NSStringFromClass(self.classForCoder).components(separatedBy: ".").last ?? "UIViewController";
-    }
-}
-
 public extension UIViewController {
     
     /// Initialize a UIViewController from storyboard with given name. Will crash if storyboard does not exist or has no initial viewcontroller
